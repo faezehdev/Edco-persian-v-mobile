@@ -653,6 +653,14 @@ video {
   inset: -0.25rem;
 }
 
+.\!bottom-0 {
+  bottom: 0px !important;
+}
+
+.\!right-0 {
+  right: 0px !important;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -691,6 +699,14 @@ video {
 
 .top-\[70\%\] {
   top: 70%;
+}
+
+.top-\[unset\] {
+  top: unset;
+}
+
+.\!top-\[unset\] {
+  top: unset !important;
 }
 
 .isolate {
@@ -801,6 +817,10 @@ video {
 
 .mr-3 {
   margin-right: 0.75rem;
+}
+
+.mr-\[\.5em\] {
+  margin-right: .5em;
 }
 
 .mr-auto {
@@ -934,6 +954,10 @@ video {
   height: 100svh;
 }
 
+.h-\[133px\] {
+  height: 133px;
+}
+
 .h-\[1px\] {
   height: 1px;
 }
@@ -966,6 +990,10 @@ video {
   width: 90%;
 }
 
+.w-\[134px\] {
+  width: 134px;
+}
+
 .w-\[18px\] {
   width: 18px;
 }
@@ -976,6 +1004,10 @@ video {
 
 .w-\[24px\] {
   width: 24px;
+}
+
+.w-\[25\%\] {
+  width: 25%;
 }
 
 .w-\[30\%\] {
@@ -1080,6 +1112,11 @@ video {
 
 .translate-y-\[21px\] {
   --tw-translate-y: 21px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[3px\] {
+  --tw-translate-y: 3px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1616,10 +1653,6 @@ video {
 
 .gap-\[3em\] {
   gap: 3em;
-}
-
-.gap-\[4em\] {
-  gap: 4em;
 }
 
 .gap-\[6px\] {
@@ -2267,11 +2300,6 @@ video {
   padding-right: 3em;
 }
 
-.px-\[4em\] {
-  padding-left: 4em;
-  padding-right: 4em;
-}
-
 .py-\[\.3em\] {
   padding-top: .3em;
   padding-bottom: .3em;
@@ -2620,6 +2648,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-gray {
+  --tw-text-opacity: 1;
+  color: rgb(139 139 143 / var(--tw-text-opacity, 1));
 }
 
 .underline {
@@ -3562,13 +3595,13 @@ main.Home-mobile .Aboutus.bg{
   transition: all 1000ms ease-in-out;
 }
 
-main.ProjectShow .swiper-slide,
+main.ProjectShow-mobile .swiper-slide,
 main.ProductShow .swiper-slide{
   width: -moz-fit-content !important;
   width: fit-content !important;
 }
 
-main.ProjectShow .swiper-button-prev:after,main.ProjectShow .swiper-rtl .swiper-button-next:after,
+main.ProjectShow-mobile .swiper-button-prev:after,main.ProjectShow-mobile .swiper-rtl .swiper-button-next:after,
 main.ProductShow .swiper-button-prev:after,main.ProductShow .swiper-rtl .swiper-button-next:after  {
   color: #373737;
   font-size: 24px;
@@ -3661,8 +3694,17 @@ main.ProductCat-C .swiper-button-prev:after,main.ProductCat-C .swiper-rtl .swipe
   transform-origin: center;
 }
 
-.swiper-scrollbar-drag{
+.ProjectShow-mobile .swiper-pagination-progressbar{
+  background-color: #000000;
+}
+
+.ProjectShow-mobile .swiper-pagination-progressbar-fill {
   background-color:#00A752 !important;
+}
+
+.ProjectShow-mobile .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+  left: unset !important;
+  right: 0;
 }
 
 main.ProductCat2-C .proCat,
@@ -3982,10 +4024,6 @@ main.ProductList-C .banner {
 
 .\[\&\.show\]\:flex.show {
   display: flex;
-}
-
-.\[\&\.show\]\:max-h-\[unset\].show {
-  max-height: unset;
 }
 
 .\[\&\.show\]\:translate-y-\[0\].show {
