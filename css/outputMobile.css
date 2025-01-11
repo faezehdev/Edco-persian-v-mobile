@@ -657,6 +657,10 @@ video {
   bottom: 0px;
 }
 
+.bottom-8 {
+  bottom: 2rem;
+}
+
 .bottom-\[1\.5em\] {
   bottom: 1.5em;
 }
@@ -687,10 +691,6 @@ video {
 
 .top-\[70\%\] {
   top: 70%;
-}
-
-.bottom-8 {
-  bottom: 2rem;
 }
 
 .isolate {
@@ -791,6 +791,10 @@ video {
   margin-bottom: 4em;
 }
 
+.mb-\[5em\] {
+  margin-bottom: 5em;
+}
+
 .ml-auto {
   margin-left: auto;
 }
@@ -821,14 +825,6 @@ video {
 
 .mt-\[4em\] {
   margin-top: 4em;
-}
-
-.mb-\[5em\] {
-  margin-bottom: 5em;
-}
-
-.mt-\[5em\] {
-  margin-top: 5em;
 }
 
 .box-border {
@@ -956,6 +952,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.max-h-0 {
+  max-height: 0px;
 }
 
 .w-0 {
@@ -1394,10 +1394,6 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.grid-cols-\[1fr\2c 1fr\2c \.5fr\] {
-  grid-template-columns: 1fr 1fr .5fr;
-}
-
 .flex-row {
   flex-direction: row;
 }
@@ -1622,12 +1618,12 @@ video {
   gap: 3em;
 }
 
-.gap-\[6px\] {
-  gap: 6px;
-}
-
 .gap-\[4em\] {
   gap: 4em;
+}
+
+.gap-\[6px\] {
+  gap: 6px;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2070,14 +2066,6 @@ video {
   border-top-width: 1px;
 }
 
-.border-l-\[1px\] {
-  border-left-width: 1px;
-}
-
-.border-t-\[1px\] {
-  border-top-width: 1px;
-}
-
 .border-solid {
   border-style: solid;
 }
@@ -2279,6 +2267,11 @@ video {
   padding-right: 3em;
 }
 
+.px-\[4em\] {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
 .py-\[\.3em\] {
   padding-top: .3em;
   padding-bottom: .3em;
@@ -2304,11 +2297,6 @@ video {
   padding-bottom: 5em;
 }
 
-.py-\[3em\] {
-  padding-top: 3em;
-  padding-bottom: 3em;
-}
-
 .pb-\[\.8em\] {
   padding-bottom: .8em;
 }
@@ -2327,14 +2315,6 @@ video {
 
 .pt-\[2em\] {
   padding-top: 2em;
-}
-
-.pl-\[\.5em\] {
-  padding-left: .5em;
-}
-
-.pb-\[3em\] {
-  padding-bottom: 3em;
 }
 
 .text-left {
@@ -2409,16 +2389,16 @@ video {
   font-family: IRANSansWebFANUM700;
 }
 
+.font-IRANSansWebFANUM900 {
+  font-family: IRANSansWebFANUM900;
+}
+
 .font-IbarraRealNova400 {
   font-family: IbarraRealNova400;
 }
 
 .font-Roboto600 {
   font-family: Roboto600;
-}
-
-.font-IRANSansWebFANUM900 {
-  font-family: IRANSansWebFANUM900;
 }
 
 .text-2xl {
@@ -2432,6 +2412,14 @@ video {
 
 .text-\[11px\] {
   font-size: 11px;
+}
+
+.text-\[25px\] {
+  font-size: 25px;
+}
+
+.text-\[40px\] {
+  font-size: 40px;
 }
 
 .text-\[8px\] {
@@ -2461,14 +2449,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[60px\] {
-  font-size: 60px;
-}
-
-.text-\[25px\] {
-  font-size: 25px;
 }
 
 .font-bold {
@@ -2615,20 +2595,12 @@ video {
   line-height: 20.09px;
 }
 
-.leading-25\.04 {
-  line-height: 25.04px;
-}
-
-.leading-\[93\.91px\] {
-  line-height: 93.91px;
-}
-
-.leading-\[39\.1px\] {
-  line-height: 39.1px;
-}
-
 .leading-\[39\.13px\] {
   line-height: 39.13px;
+}
+
+.leading-\[62\.61px\] {
+  line-height: 62.61px;
 }
 
 .text-\[\#336699\]\/\[\.35\] {
@@ -3567,7 +3539,7 @@ a {
         width: 30%;
     } */
 
-main.Home .Aboutus.bg{
+main.Home-mobile .Aboutus.bg{
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -3885,6 +3857,10 @@ main.ProductList-C .banner {
   content: var(--tw-content);
 }
 
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
 }
@@ -3921,13 +3897,13 @@ main.ProductList-C .banner {
   width: 30%;
 }
 
-.group\/project:hover .group-hover\/project\:scale-\[1\.1\] {
+.group\/catalog:hover .group-hover\/catalog\:scale-\[1\.1\] {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group\/catalog:hover .group-hover\/catalog\:scale-\[1\.1\] {
+.group\/project:hover .group-hover\/project\:scale-\[1\.1\] {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -4002,4 +3978,21 @@ main.ProductList-C .banner {
 
 .\[\&\.open\]\:w-full.open {
   width: 100%;
+}
+
+.\[\&\.show\]\:flex.show {
+  display: flex;
+}
+
+.\[\&\.show\]\:max-h-\[unset\].show {
+  max-height: unset;
+}
+
+.\[\&\.show\]\:translate-y-\[0\].show {
+  --tw-translate-y: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.\[\&\.show\]\:opacity-\[1\].show {
+  opacity: 1;
 }

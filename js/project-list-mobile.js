@@ -2,6 +2,8 @@
 let projects =[...document.querySelectorAll('.project')]
 document.addEventListener('DOMContentLoaded',()=>{
     projects.map((pro,i)=>{
+        console.log(pro);
+        
         if(i<6){
             pro.classList.add('show')
         }
