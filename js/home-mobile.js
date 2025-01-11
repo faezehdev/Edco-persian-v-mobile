@@ -45,11 +45,3 @@ proContainer.addEventListener('mouseover',(e)=>{
         pro.classList.remove('hover')
        }) 
     })
-
-// blog slider
-let SwiperBanner= new Swiper ('.swiper-blogs', {
-    slidesPerView: 4,
-    spaceBetween: 50,
-   speed:2000,
-   grabCursor: true,
-    }) 

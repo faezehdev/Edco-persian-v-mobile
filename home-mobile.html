@@ -10,7 +10,8 @@
 </head>
 <body>
     <main class="Home-mobile flex flex-col overflow-hidden" dir="rtl">
-        <header id="mobile-header" class="fixed py-[1.5em] z-[99] w-full grid grid-cols-2 top-0 left-0 h-[10vh]">
+        <header id="mobile-header" class="fixed group/heade [&.goDown]:bg-white duration-150
+         py-[1.5em] z-[99] w-full grid grid-cols-2 top-0 left-0">
         
             <div class="right flex justify-start w-90p mr-auto gap-3">
                 <nav class="mobile-menu w-auto flex justify-start items-center">
@@ -130,7 +131,7 @@
             </div>
         </header>
   
-        <section class="section-1 w-full h-screen flex">
+        <section class="section-1 w-full h-[100svh] flex">
           <div class="Banner w-full h-full flex relative">
             <div class="Video w-full h-full flex justify-center items-center">
                 <img src="images/Frame 143726280.png" alt="" class="w-full h-full object-cover">
@@ -140,9 +141,9 @@
          <source data-src="[##cms.cms.cdn##]/images/logo-motion.webm" type="video/webm">
         </video> -->
             </div>
-             <div class="overlay  absolute z-2 top-0 left-0 w-[70%] right-0 mx-auto h-full flex justify-end items-end flex-col">
+             <div class="overlay  absolute z-2 top-0 left-0 w-[90%] right-0 mx-auto h-full flex justify-end items-end flex-col">
                 <div class="title w-full flex justify-start items-start">
-                    <h1 class="font-IRANSansWebFANUM700 font-semibold text-2xl leading-37.57 text-dark text-right">
+                    <h1 class="font-IRANSansWebFANUM700 font-semibold text-lg leading-28.17 text-dark text-right">
                         ادکو زندگی شما را روشن تر می کند...
                     </h1>
                 </div>
@@ -153,16 +154,18 @@
              </div>
           </div>
         </section>
-        <section class="section-2 w-full flex mt-[3em]">
-            <div class="Aboutus py-[5em] px-[5em] bg w-full" style="background-image: url(/images/Layer\ 8\ 1.png);">
-               <div class="Box max-w-[382px] bg-dark1 w-auto py-[2em] px-[3em] flex flex-col gap-2">
+        <section class="section-2 w-full flex relative">
+            <div class="Aboutus py-[5em] pl-[5em]  before:content-[''] 
+            before:left-0 before:w-full before:flex before:absolute before:h-full before:bg-[#00000040] before:duration-100 before:top-0 
+             bg w-full" style="background-image: url(/images/Layer\ 8\ 1.png);">
+               <div class="Box relative z-1 max-w-[382px] bg-dark1 w-auto py-[2em] px-[2em] flex flex-col gap-2">
                 <div class="title w-full flex justify-start items-start border-r-[1px] pr-[.5em] border-green">
-                    <h2 class="font-IRANSansWebFANUM400 font-normal text-base leading-[26.78px] text-white text-justify">
+                    <h2 class="font-IRANSansWebFANUM400 font-normal text-xs leading-[20.09px] text-white text-justify">
                         هر شرکتی داستان مخصوص به خود را دارد و این داستان ماست.
                     </h2>
                 </div>
                 <div class="text w-full flex flex-col justify-start items-start">
-                    <p class="font-IRANSansWebFANUM300 font-light text-xs leading-[24.96px] text-white text-justify"> 
+                    <p class="font-IRANSansWebFANUM300 font-light text-[11px] leading-[16.8px] text-white text-justify"> 
                         در سال 1379 شرکت ما شروع به واردات برخی از کالاهای برقی کرد و به عنوان یک شرکت بازرگانی عمومی کشتیرانی خود را در منطقه خاورمیانه آغاز کرد، اما خیلی زود   صاحبان جوان شرکت، شکل شرکت را به شرکت تولیدی تغییر دادند.
 و در حال حاضر ما تولید کننده کلید و پریزهای طراحی آلمانی با کیفیتی هستیم که می توان آن را با اکثر شرکت های معروف و شناخته شده با کیفیت بالا مانند Schneider، Berker، Hager و غیره مقایسه کرد.
 و اکنون پس از گذشت تقریباً 22 سال، از کلید و پریزهای طراحی کلاسیک تا مدرن، با بیش از 200 نوع محصول و حتی فراتر رفته و به سطوح بالاتری از کیفیت و محصولات مبتنی بر فناوری می‌رویم.
@@ -170,10 +173,10 @@
                 </div>
                 <a href="" class="showMore group/btn w-max relative before:content-[''] before:absolute before:right-0 before:w-[0px] before:top-0
                 before:bg-green before:h-full before:z-0 before:duration-[.5s] before:ease-in hover:before:w-full
-                py-[.5em] px-[2em] border-[1px] border-green ">
+                py-[.3em] px-[2em] border-[1px] border-green ">
                    
                     <span class="text group-hover/btn:text-white duration-75 text-white font-IRANSansWebFANUM500 
-                    text-[11px] leading-[17.22px] font-medium relative z-1">
+                    text-[10px] leading-[15.65px] font-medium relative z-1">
                         درباره ما
                     </span>
                 </a>
@@ -183,11 +186,11 @@
         <section class="section-3 w-full flex mt-[4em]">
             <div class="Products-container gap-7 w-full flex flex-col">
                <div class="Title-big w-90p mx-auto flex justify-start items-start">
-                    <h3 class="font-IRANSansWebFANUM500 text-2xl leading-37.57 text-dark font-medium text-right">
+                    <h3 class="font-IRANSansWebFANUM500 text-xl leading-31.03 text-dark font-medium text-right">
                         محصولات
                     </h3>
                </div>
-               <div class="Products-cat mb-[4em] w-90p mx-auto grid grid-cols-3 gap-[4em]">
+               <div class="Products-cat mb-[2em] w-90p mx-auto flex flex-col gap-[3em]">
                    <a href="" class="product [&.hover]:opacity-[.6] [&.active]:!opacity-[1] [&.fade-in]:opacity-[1] [&.fade-in]:translate-y-[0] w-full flex flex-col gap-2 
                    translate-y-[5em] opacity-0">
                        <div class="IMG w-full flex justify-center items-center">
@@ -285,9 +288,9 @@
                        </div>
                    </a>        
                </div>
-               <a href="" class="showMore group/btn mb-[4em] mx-auto w-max relative before:content-[''] before:absolute before:right-0 before:w-[0px] before:top-0
+               <a href="" class="showMore group/btn mb-[2em] mx-auto w-max relative before:content-[''] before:absolute before:right-0 before:w-[0px] before:top-0
                before:bg-green before:h-full before:z-0 before:duration-[.5s] before:ease-in hover:before:w-full
-               py-[.5em] px-[4em] border-[1px] border-green ">
+               py-[.5em] px-[3em] border-[1px] border-green ">
                   
                    <span class="text group-hover/btn:text-white duration-75 text-dark font-IRANSansWebFANUM300 
                    text-[10px] leading-[15.65px] font-light relative z-1">
@@ -299,11 +302,11 @@
         <section class="section-4 w-full flex mt-[4em]">
             <div class="Projects-container gap-7 w-full flex flex-col">
                <div class="Title-big w-90p mx-auto flex justify-start items-start">
-                    <h4 class="font-IRANSansWebFANUM500 text-2xl leading-37.57 text-dark font-medium text-right">
+                    <h4 class="font-IRANSansWebFANUM500 text-xl leading-31.03 text-dark font-medium text-right">
                         پروژه های ادکو
                     </h4>
                </div>
-               <div class="Projects mb-[4em] w-90p mx-auto grid grid-cols-3 gap-[4em]">
+               <div class="Projects mb-[4em] w-90p mx-auto flex flex-col gap-[2em]">
                    <a href="" class="project group/project [&.fade-in]:opacity-[1] [&.fade-in]:translate-y-[0] w-full flex flex-col gap-2 
                    translate-y-[5em] opacity-0">
                        <div class="IMG w-full overflow-hidden flex justify-center items-center">
@@ -361,7 +364,7 @@
                </div>
                <a href="" class="showMore group/btn mb-[4em] mx-auto w-max relative before:content-[''] before:absolute before:right-0 before:w-[0px] before:top-0
                before:bg-green before:h-full before:z-0 before:duration-[.5s] before:ease-in hover:before:w-full
-               py-[.5em] px-[4em] border-[1px] border-green ">
+               py-[.5em] px-[3em] border-[1px] border-green ">
                   
                    <span class="text group-hover/btn:text-white duration-75 text-dark font-IRANSansWebFANUM300 
                    text-[10px] leading-[15.65px] font-light relative z-1">
@@ -373,255 +376,140 @@
         <section class="section-5 w-full flex mt-[4em]">
             <div class="Projects-container gap-7 w-full flex flex-col">
                <div class="Title-big w-90p mx-auto flex justify-start items-start">
-                    <h5 class="font-IRANSansWebFANUM500 text-2xl leading-37.57 text-dark font-medium text-right">
+                    <h5 class="font-IRANSansWebFANUM500 text-xl leading-31.03 text-dark font-medium text-right">
                         مقالات
                     </h5>
                </div>
-               <div class="Blogs mb-[4em] w-90p mx-auto grid grid-cols-1 gap-[4em]">
-                <div class="swiper-blogs w-full overflow-hidden">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide w-full flex">
-                            <div class="blog group/blog w-full flex flex-col gap-2">
-                                <div class="IMG w-full overflow-hidden flex justify-center items-center">
-                                    <img src="images/pict1366441000012450123000013059001 1.png" alt="" class=" group-hover/project:scale-[1.1] duration-[1000ms]
-                                    ease-in-out w-full object-cover">
-                                </div>
-                                <div class="Title mt-3 w-full flex justify-start items-start">
-                                 <p class="font-IRANSansWebFANUM700 font-semibold text-xs leading-18.78 text-dark text-right">
-                                     استانداردهای امنیتی و بهداشتی خود را افزایش دهید
-         
-                                 </p>
-                             </div>
-                             <div class="Text mt-3 w-full flex justify-start items-start flex-col">
-                                 <p class="font-IRANSansWebFANUM400 font-normal text-xs leading-18.78 text-dark text-justify">
-                                     قاب های ظریف EDCO در ترکیب با دسته های اهرمی SPIRIT کاملاً متفاوت است. این سبک نمای کلاسیک سوئیچ ضامن را با فریم های لبه برش مدرن ترکیب می کند و میتواند یک برنده واقعی در پروژه ای باشد که به دنبال طراحی کلاسیک جدید است  
-                                 </p>
-                             </div>
-                             <a href="" class="showMore group/btn mx-auto w-max relative before:content-[''] before:absolute
-                              before:right-0 before:w-full before:bottom-0
-                             before:bg-green before:h-[1px] before:z-0 before:duration-[.5s] before:ease-in hover:before:w-[0px]">
-                                
-                                 <span class="text text-dark font-IRANSansWebFANUM300 
-                                 text-[10px] leading-[15.65px] font-light relative z-1">
-                                 مشاهده موارد بیشتر
-                                 </span>
-                             </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide w-full flex">
-                            <div class="blog group/blog w-full flex flex-col gap-2">
-                                <div class="IMG w-full overflow-hidden flex justify-center items-center">
-                                    <img src="images/pict1366441000012450123000013059001 1.png" alt="" class=" group-hover/project:scale-[1.1] duration-[1000ms]
-                                    ease-in-out w-full object-cover">
-                                </div>
-                                <div class="Title mt-3 w-full flex justify-start items-start">
-                                 <p class="font-IRANSansWebFANUM700 font-semibold text-xs leading-18.78 text-dark text-right">
-                                     استانداردهای امنیتی و بهداشتی خود را افزایش دهید
-         
-                                 </p>
-                             </div>
-                             <div class="Text mt-3 w-full flex justify-start items-start flex-col">
-                                 <p class="font-IRANSansWebFANUM400 font-normal text-xs leading-18.78 text-dark text-justify">
-                                     قاب های ظریف EDCO در ترکیب با دسته های اهرمی SPIRIT کاملاً متفاوت است. این سبک نمای کلاسیک سوئیچ ضامن را با فریم های لبه برش مدرن ترکیب می کند و میتواند یک برنده واقعی در پروژه ای باشد که به دنبال طراحی کلاسیک جدید است  
-                                 </p>
-                             </div>
-                             <a href="" class="showMore group/btn mx-auto w-max relative before:content-[''] before:absolute
-                              before:right-0 before:w-full before:bottom-0
-                             before:bg-green before:h-[1px] before:z-0 before:duration-[.5s] before:ease-in hover:before:w-[0px]">
-                                
-                                 <span class="text text-dark font-IRANSansWebFANUM300 
-                                 text-[10px] leading-[15.65px] font-light relative z-1">
-                                 مشاهده موارد بیشتر
-                                 </span>
-                             </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide w-full flex">
-                            <div class="blog group/blog w-full flex flex-col gap-2">
-                                <div class="IMG w-full overflow-hidden flex justify-center items-center">
-                                    <img src="images/pict1366441000012450123000013059001 1.png" alt="" class=" group-hover/project:scale-[1.1] duration-[1000ms]
-                                    ease-in-out w-full object-cover">
-                                </div>
-                                <div class="Title mt-3 w-full flex justify-start items-start">
-                                 <p class="font-IRANSansWebFANUM700 font-semibold text-xs leading-18.78 text-dark text-right">
-                                     استانداردهای امنیتی و بهداشتی خود را افزایش دهید
-         
-                                 </p>
-                             </div>
-                             <div class="Text mt-3 w-full flex justify-start items-start flex-col">
-                                 <p class="font-IRANSansWebFANUM400 font-normal text-xs leading-18.78 text-dark text-justify">
-                                     قاب های ظریف EDCO در ترکیب با دسته های اهرمی SPIRIT کاملاً متفاوت است. این سبک نمای کلاسیک سوئیچ ضامن را با فریم های لبه برش مدرن ترکیب می کند و میتواند یک برنده واقعی در پروژه ای باشد که به دنبال طراحی کلاسیک جدید است  
-                                 </p>
-                             </div>
-                             <a href="" class="showMore group/btn mx-auto w-max relative before:content-[''] before:absolute
-                              before:right-0 before:w-full before:bottom-0
-                             before:bg-green before:h-[1px] before:z-0 before:duration-[.5s] before:ease-in hover:before:w-[0px]">
-                                
-                                 <span class="text text-dark font-IRANSansWebFANUM300 
-                                 text-[10px] leading-[15.65px] font-light relative z-1">
-                                 مشاهده موارد بیشتر
-                                 </span>
-                             </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide w-full flex">
-                            <div class="blog group/blog w-full flex flex-col gap-2">
-                                <div class="IMG w-full overflow-hidden flex justify-center items-center">
-                                    <img src="images/pict1366441000012450123000013059001 1.png" alt="" class=" group-hover/project:scale-[1.1] duration-[1000ms]
-                                    ease-in-out w-full object-cover">
-                                </div>
-                                <div class="Title mt-3 w-full flex justify-start items-start">
-                                 <p class="font-IRANSansWebFANUM700 font-semibold text-xs leading-18.78 text-dark text-right">
-                                     استانداردهای امنیتی و بهداشتی خود را افزایش دهید
-         
-                                 </p>
-                             </div>
-                             <div class="Text mt-3 w-full flex justify-start items-start flex-col">
-                                 <p class="font-IRANSansWebFANUM400 font-normal text-xs leading-18.78 text-dark text-justify">
-                                     قاب های ظریف EDCO در ترکیب با دسته های اهرمی SPIRIT کاملاً متفاوت است. این سبک نمای کلاسیک سوئیچ ضامن را با فریم های لبه برش مدرن ترکیب می کند و میتواند یک برنده واقعی در پروژه ای باشد که به دنبال طراحی کلاسیک جدید است  
-                                 </p>
-                             </div>
-                             <a href="" class="showMore group/btn mx-auto w-max relative before:content-[''] before:absolute
-                              before:right-0 before:w-full before:bottom-0
-                             before:bg-green before:h-[1px] before:z-0 before:duration-[.5s] before:ease-in hover:before:w-[0px]">
-                                
-                                 <span class="text text-dark font-IRANSansWebFANUM300 
-                                 text-[10px] leading-[15.65px] font-light relative z-1">
-                                 مشاهده موارد بیشتر
-                                 </span>
-                             </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide w-full flex">
-                            <div class="blog group/blog w-full flex flex-col gap-2">
-                                <div class="IMG w-full overflow-hidden flex justify-center items-center">
-                                    <img src="images/pict1366441000012450123000013059001 1.png" alt="" class=" group-hover/project:scale-[1.1] duration-[1000ms]
-                                    ease-in-out w-full object-cover">
-                                </div>
-                                <div class="Title mt-3 w-full flex justify-start items-start">
-                                 <p class="font-IRANSansWebFANUM700 font-semibold text-xs leading-18.78 text-dark text-right">
-                                     استانداردهای امنیتی و بهداشتی خود را افزایش دهید
-         
-                                 </p>
-                             </div>
-                             <div class="Text mt-3 w-full flex justify-start items-start flex-col">
-                                 <p class="font-IRANSansWebFANUM400 font-normal text-xs leading-18.78 text-dark text-justify">
-                                     قاب های ظریف EDCO در ترکیب با دسته های اهرمی SPIRIT کاملاً متفاوت است. این سبک نمای کلاسیک سوئیچ ضامن را با فریم های لبه برش مدرن ترکیب می کند و میتواند یک برنده واقعی در پروژه ای باشد که به دنبال طراحی کلاسیک جدید است  
-                                 </p>
-                             </div>
-                             <a href="" class="showMore group/btn mx-auto w-max relative before:content-[''] before:absolute
-                              before:right-0 before:w-full before:bottom-0
-                             before:bg-green before:h-[1px] before:z-0 before:duration-[.5s] before:ease-in hover:before:w-[0px]">
-                                
-                                 <span class="text text-dark font-IRANSansWebFANUM300 
-                                 text-[10px] leading-[15.65px] font-light relative z-1">
-                                 مشاهده موارد بیشتر
-                                 </span>
-                             </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide w-full flex">
-                            <div class="blog group/blog w-full flex flex-col gap-2">
-                                <div class="IMG w-full overflow-hidden flex justify-center items-center">
-                                    <img src="images/pict1366441000012450123000013059001 1.png" alt="" class=" group-hover/project:scale-[1.1] duration-[1000ms]
-                                    ease-in-out w-full object-cover">
-                                </div>
-                                <div class="Title mt-3 w-full flex justify-start items-start">
-                                 <p class="font-IRANSansWebFANUM700 font-semibold text-xs leading-18.78 text-dark text-right">
-                                     استانداردهای امنیتی و بهداشتی خود را افزایش دهید
-         
-                                 </p>
-                             </div>
-                             <div class="Text mt-3 w-full flex justify-start items-start flex-col">
-                                 <p class="font-IRANSansWebFANUM400 font-normal text-xs leading-18.78 text-dark text-justify">
-                                     قاب های ظریف EDCO در ترکیب با دسته های اهرمی SPIRIT کاملاً متفاوت است. این سبک نمای کلاسیک سوئیچ ضامن را با فریم های لبه برش مدرن ترکیب می کند و میتواند یک برنده واقعی در پروژه ای باشد که به دنبال طراحی کلاسیک جدید است  
-                                 </p>
-                             </div>
-                             <a href="" class="showMore group/btn mx-auto w-max relative before:content-[''] before:absolute
-                              before:right-0 before:w-full before:bottom-0
-                             before:bg-green before:h-[1px] before:z-0 before:duration-[.5s] before:ease-in hover:before:w-[0px]">
-                                
-                                 <span class="text text-dark font-IRANSansWebFANUM300 
-                                 text-[10px] leading-[15.65px] font-light relative z-1">
-                                 مشاهده موارد بیشتر
-                                 </span>
-                             </a>
-                            </div>
-                        </div>
+               <div class="Blogs mb-[4em] w-90p mx-auto flex flex-col gap-[2em]">
+                <div class="blog group/blog w-full flex flex-col gap-2">
+                    <div class="IMG w-full overflow-hidden flex justify-center items-center">
+                        <img src="images/pict1366441000012450123000013059001 1.png" alt="" class=" group-hover/project:scale-[1.1] duration-[1000ms]
+                        ease-in-out w-full object-cover">
                     </div>
+                    <div class="Title mt-3 w-full flex justify-start items-start">
+                     <p class="font-IRANSansWebFANUM700 font-semibold text-xs leading-18.78 text-dark text-right">
+                         استانداردهای امنیتی و بهداشتی خود را افزایش دهید
+
+                     </p>
+                 </div>
+                 <div class="Text mt-3 w-full flex justify-start items-start flex-col">
+                     <p class="font-IRANSansWebFANUM400 font-normal text-xs leading-18.78 text-dark text-justify">
+                         قاب های ظریف EDCO در ترکیب با دسته های اهرمی SPIRIT کاملاً متفاوت است. این سبک نمای کلاسیک سوئیچ ضامن را با فریم های لبه برش مدرن ترکیب می کند و میتواند یک برنده واقعی در پروژه ای باشد که به دنبال طراحی کلاسیک جدید است  
+                     </p>
+                 </div>
+                 <a href="" class="showMore group/btn mx-auto w-max relative before:content-[''] before:absolute
+                  before:right-0 before:w-full before:bottom-0
+                 before:bg-green before:h-[1px] before:z-0 before:duration-[.5s] before:ease-in hover:before:w-[0px]">
+                    
+                     <span class="text text-dark font-IRANSansWebFANUM400 
+                     text-[8px] leading-[12.52px] font-light relative z-1">
+                     مشاهده موارد بیشتر
+                     </span>
+                 </a>
                 </div>
-                 
-           
+                <div class="blog group/blog w-full flex flex-col gap-2">
+                    <div class="IMG w-full overflow-hidden flex justify-center items-center">
+                        <img src="images/pict1366441000012450123000013059001 1.png" alt="" class=" group-hover/project:scale-[1.1] duration-[1000ms]
+                        ease-in-out w-full object-cover">
+                    </div>
+                    <div class="Title mt-3 w-full flex justify-start items-start">
+                     <p class="font-IRANSansWebFANUM700 font-semibold text-xs leading-18.78 text-dark text-right">
+                         استانداردهای امنیتی و بهداشتی خود را افزایش دهید
+
+                     </p>
+                 </div>
+                 <div class="Text mt-3 w-full flex justify-start items-start flex-col">
+                     <p class="font-IRANSansWebFANUM400 font-normal text-xs leading-18.78 text-dark text-justify">
+                         قاب های ظریف EDCO در ترکیب با دسته های اهرمی SPIRIT کاملاً متفاوت است. این سبک نمای کلاسیک سوئیچ ضامن را با فریم های لبه برش مدرن ترکیب می کند و میتواند یک برنده واقعی در پروژه ای باشد که به دنبال طراحی کلاسیک جدید است  
+                     </p>
+                 </div>
+                 <a href="" class="showMore group/btn mx-auto w-max relative before:content-[''] before:absolute
+                  before:right-0 before:w-full before:bottom-0
+                 before:bg-green before:h-[1px] before:z-0 before:duration-[.5s] before:ease-in hover:before:w-[0px]">
+                    
+                     <span class="text text-dark font-IRANSansWebFANUM400 
+                     text-[8px] leading-[12.52px] font-light relative z-1">
+                     مشاهده موارد بیشتر
+                     </span>
+                 </a>
+                </div>
                </div>
             
             </div>
         </section>
-        <footer class="DesktopFooter flex-col w-full flex pt-[2em] bg-dark1">
-            <div class="inner-footer pb-[1em] w-90p mx-auto grid grid-cols-[1fr,1fr,.5fr]">
+        <footer class="MobileFooter flex-col w-full flex pt-[2em] bg-dark1">
+
+            <div class="inner-footer pb-[1em] w-90p mx-auto flex flex-col">
+                <div class="Logo w-full flex justify-center gap-4 items-center">
+                    <span class="line w-full h-[1px] bg-[#FFFFFFD9]"></span>
+                    <a href="" class="w-full flex justify-center items-center">
+                        <img src="images/Layer_x0020_1 (1).png" alt="">
+                    </a>
+                    <span class="line w-full h-[1px] bg-[#FFFFFFD9]"></span>
+                </div>
                 <div class="col w-full flex justify-start items-start">
-                    <div class="Logo w-auto border-l-[1px] border-white pl-[.5em] flex justify-center items-center">
-                        <a href="">
-                            <img src="images/Layer_x0020_1 (1).png" alt="">
-                        </a>
-                    </div>
-                    <nav class="Menu-footer mr-3 w-auto flex justify-start items-start ">
-                        <ul class="w-auto flex justify-start text-start gap-6">
+                  
+                    <nav class="Menu-footer mt-5 w-[30%] border-b-[1px] pb-[1em] mb-[1em] border-[#FFFFFFD9] flex justify-start items-start ">
+                        <ul class="w-full flex justify-start items-start flex-col text-start gap-4">
                             <li class="Menu-item w-auto flex justify-center items-center">
-                                <a href="" class="Menu-link font-IRANSansWebFANUM500 text-xs leading-18.78 text-white font-medium">
-                                    محصولات
-                                </a>
-                            </li>
-                            <li class="Menu-item w-auto flex justify-center items-center">
-                                <a href="" class="Menu-link font-IRANSansWebFANUM500 text-xs leading-18.78 text-white font-medium">
-                                    پروژه ها
-                                </a>
-                            </li>
-                            <li class="Menu-item w-auto flex justify-center items-center">
-                                <a href="" class="Menu-link font-IRANSansWebFANUM500 text-xs leading-18.78 text-white font-medium">
-                                    مقالات
-                                </a>
-                            </li>
-                            <li class="Menu-item w-auto flex justify-center items-center">
-                                <a href="" class="Menu-link font-IRANSansWebFANUM500 text-xs leading-18.78 text-white font-medium">
+                                <a href="" class="Menu-link font-IRANSansWebFANUM300 text-xs leading-18.78 text-white font-light">
                                     درباره ما
                                 </a>
                             </li>
                             <li class="Menu-item w-auto flex justify-center items-center">
-                                <a href="" class="Menu-link font-IRANSansWebFANUM500 text-xs leading-18.78 text-white font-medium">
+                                <a href="" class="Menu-link font-IRANSansWebFANUM300 text-xs leading-18.78 text-white font-light">
                                     تماس با ما
                                 </a>
                             </li>
+                            <li class="Menu-item w-auto flex justify-center items-center">
+                                <a href="" class="Menu-link font-IRANSansWebFANUM300 text-xs leading-18.78 text-white font-light">
+                                    مقالات
+                                </a>
+                            </li>
+                            <li class="Menu-item w-auto flex justify-center items-center">
+                                <a href="" class="Menu-link font-IRANSansWebFANUM300 text-xs leading-18.78 text-white font-light"> 
+                                      پروژه ها
+                                </a>
+                            </li>
+                            <li class="Menu-item w-auto flex justify-center items-center">
+                                <a href="" class="Menu-link font-IRANSansWebFANUM300 text-xs leading-18.78 text-white font-light">
+                                    محصولات
+                                </a>
+                            </li>
+                          
+                           
+                           
                         </ul>
                     </nav>
                 </div>
                 <div class="col w-full flex justify-start">
                     <div class="contact w-full flex flex-col justify-start items-start gap-2">
                         <div class="row w-full flex flex-col gap-2">
-                            <span class="Question font-IRANSansWebFANUM400 text-xs font-normal leading-18.78 text-white">
+                            <span class="Question font-IRANSansWebFANUM400 text-sm font-normal leading-21.91 text-white">
                                 دفتر مرکزی ادکو در ایران:
 
                             </span>
-                            <span class="Answer font-IRANSansWebFANUM400 text-xs font-normal leading-18.78 text-white">
+                            <span class="Answer font-IRANSansWebFANUM400 text-sm font-normal leading-21.91 text-white">
                                 تهران، خیابان دولت، خیابان مطهری، پلاک 6، واحد 19
 
 
                             </span>
                         </div>
                         <div class="row w-full flex flex-col gap-2">
-                            <span class="Question font-IRANSansWebFANUM400 text-xs font-normal leading-18.78 text-white">
+                            <span class="Question font-IRANSansWebFANUM400 text-sm font-normal leading-21.91 text-white">
                                 تلفن:
 
                             </span>
-                            <span class="Answer font-IRANSansWebFANUM400 text-xs font-normal leading-18.78 text-white">
-                              <a href="" class="font-IRANSansWebFANUM400 text-xs font-normal leading-18.78 text-white">
+                            <span class="Answer font-IRANSansWebFANUM400 text-sm font-normal leading-21.91 text-white">
+                              <a href="" class="font-IRANSansWebFANUM400 text-sm font-normal leading-21.91 text-white">
                                 22793710-22793944
                               </a>
                             </span>
                         </div>
                     </div>
                 </div>
-                <div class="col w-full flex justify-end items-end">
-                    <div class="Socials w-auto flex flex-col justify-start items-start gap-3">
+                <div class="col border-b-[1px] border-[#FFFFFFD9] w-full  flex justify-end items-end">
+                    <div class="Socials w-full flex my-[1.5em] justify-start items-start gap-3">
                         <span class="social-item w-[24px] h-[24px] rounded-full bg-white flex justify-center items-center">
                             <a href="" class="whatsapp">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -649,12 +537,12 @@
                     </div>
                 </div>
             </div>
-            <div class="bottom w-90p mx-auto flex py-[.5em] border-t-[1px] border-white ">
-              <div class="copyRights justify-between items-center w-full flex">
-                <span class="copy w-auto flex font-IbarraRealNova400 font-normal text-xs leading-[15px] text-white">
+            <div class="bottom w-90p mx-auto flex py-[.5em] ">
+              <div class="copyRights flex-col justify-center gap-4 items-center w-full flex pb-[.8em]">
+                <span class="copy w-auto flex font-IbarraRealNova400 font-normal text-xs leading-[15px] text-[#F8F7F7]">
                     Copyright © 2023 Edco, All rights reserved
                 </span>
-                <a href="" class="namasite w-auto flex font-IbarraRealNova400 font-normal text-sm leading-18.75 text-white">
+                <a href="" class="namasite w-auto flex font-IbarraRealNova400 font-normal text-sm leading-18.75 text-[#F8F7F7]">
                     Website design and SEO by Nemasite
                 </a>
               </div>
