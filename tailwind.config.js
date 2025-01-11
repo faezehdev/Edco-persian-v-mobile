@@ -30,7 +30,8 @@ module.exports = {
       IRANSansWebFANUM500: ["IRANSansWebFANUM500"],
       IRANSansWebFANUM700: ["IRANSansWebFANUM700"],
       IRANSansWebFANUM900: ["IRANSansWebFANUM900"],
-      IbarraRealNova400:["IbarraRealNova400"]
+      IbarraRealNova400:["IbarraRealNova400"],
+      Roboto600:["Roboto600"]
     },
     extend: {
       borderRadius: {
