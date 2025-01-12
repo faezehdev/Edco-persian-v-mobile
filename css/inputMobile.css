@@ -480,11 +480,11 @@ background-size: cover;
     transition: all 1000ms ease-in-out;
 }
 main.ProjectShow-mobile .swiper-slide,
-main.ProductShow .swiper-slide{
+main.ProductShow-mobile .swiper-slide{
     width: fit-content !important;
 }
 main.ProjectShow-mobile .swiper-button-prev:after,main.ProjectShow-mobile .swiper-rtl .swiper-button-next:after,
-main.ProductShow .swiper-button-prev:after,main.ProductShow .swiper-rtl .swiper-button-next:after  {
+main.ProductShow-mobile .swiper-button-prev:after,main.ProductShow-mobile .swiper-rtl .swiper-button-next:after  {
     color: #373737;
     font-size: 24px;
 }
@@ -517,59 +517,12 @@ padding: 0 1em;
   -ms-transform: translateY(-3%);
   -o-transform: translateY(-3%);
 }
- .sideMenu{
-  overflow: hidden;
-  list-style-type: none;
-  top: 0;
-  left: 0;
-  pointer-events:all;
-}
- .sideMenu.sticky .menu__active{
-  width: 27px;
-}
- .sideMenu ul.menu__list{
-gap: 10px;
-position: relative;
-}
- .sideMenu ul.menu__list li.menu__item{
-list-style-type: none;
-transition: color .8s ease 0s;
--webkit-transition: color .8s ease 0s;
--moz-transition: color .8s ease 0s;
--ms-transition: color .8s ease 0s;
--o-transition: color .8s ease 0s;
-}
-.sideMenu ul.menu__list li.menu__item a{
-  transition: color .8s ease 0s;
--webkit-transition: color .8s ease 0s;
--moz-transition: color .8s ease 0s;
--ms-transition: color .8s ease 0s;
--o-transition: color .8s ease 0s;
-
-}
- .sideMenu .menu__active{
-  position: absolute;
-  top: 9px;
- /* left: 0; */
-  width: 40px !important;
-  background-color:#00A752;
-  height: 4px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  transition: all .8s ease 0s;
-  -webkit-transition: all .8s ease 0s;
-  -moz-transition: all .8s ease 0s;
-  -ms-transition: all .8s ease 0s;
-  -o-transition: all .8s ease 0s;
-  transform-origin: center;
-}
+ 
 .ProjectShow-mobile .swiper-pagination-progressbar{
 background-color: #000000;
 }
-.ProjectShow-mobile .swiper-pagination-progressbar-fill {
+.ProjectShow-mobile .swiper-pagination-progressbar-fill,
+main.ProductShow-mobile .swiper-scrollbar-drag {
   background-color:#00A752 !important;
 }
 .ProjectShow-mobile .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
