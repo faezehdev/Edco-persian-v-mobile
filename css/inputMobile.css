@@ -63,7 +63,7 @@
   }
   @font-face {
     font-family: "Roboto600";
-    src: url("../fonts/Roboto-VariableFont_wdth\,wght.ttf");
+    src: url("../fonts/Roboto-VariableFont.ttf");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -488,13 +488,13 @@ main.ProductShow-mobile .swiper-button-prev:after,main.ProductShow-mobile .swipe
     color: #373737;
     font-size: 24px;
 }
-main.ProductCat-C .swiper-pagination-bullet {
+main.ProductCat-mobile .swiper-pagination-bullet {
     width: 18px !important;
     height: 18px !important;
     background-color: #00A752;
     border-radius: 29px;
 }
-main.ProductCat-C .swiper-button-prev:after,main.ProductCat-C .swiper-rtl .swiper-button-next:after {
+main.ProductCat-mobile .swiper-button-prev:after,main.ProductCat-mobile .swiper-rtl .swiper-button-next:after {
     color: #ffff;
     font-size: 34px;
 }
@@ -529,8 +529,8 @@ main.ProductShow-mobile .swiper-scrollbar-drag {
     left: unset !important;
     right: 0;
 }
-main.ProductCat2-C .proCat,
-main.ProductList-C .banner {
+main.ProductCat2-mobile .proCat,
+main.ProductList-mobile .banner {
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -539,24 +539,24 @@ main.ProductList-C .banner {
 .w-90p{
 max-width: 1400px;
 }
-.Home .section-2 .text p{
-font-size: 12px;
+.Home-mobile .section-2 .text p{
+font-size: 11px;
 font-weight: 300;
-line-height: 24.96px;
+line-height: 16.5px;
 font-family: "IRANSansWebFANUM300";
 color: #FFFFFF;
 text-align: justify;
 }
-.ArticleShow  .text-C p,
-.ArticleShow .text-I p{
+.ArticleShow-mobile  .text-C p,
+.ArticleShow-mobile .text-I p{
   font-size: 14px;
-  font-weight: 300;
-  line-height: 21.91px;
-  font-family: "IRANSansWebFANUM300";
+  font-weight: 400;
+  line-height: 32px;
+  font-family: "IRANSansWebFANUM400";
   color:#000000;
   text-align: justify;
 }
-.AboutUs-C .section-2 .Text p{
+.AboutUs-mobile .section-2 .Text p{
   font-size: 14px;
   font-weight: 400;
   line-height: 32px;
@@ -564,18 +564,18 @@ text-align: justify;
   color: #000000;
   text-align: justify;
   }
-  .AboutUs-C .section-3 .Text p{
+  .AboutUs-mobile .section-3 .Text p{
     font-size: 14px;
     font-weight: 400;
-    line-height: 26.78px;
+    line-height: 23.44px;
     font-family: "IRANSansWebFANUM400";
     color: #FFFFFF;
     text-align: justify;
     }
-    .AboutUs-C .section-5 .Text p{
+    .AboutUs-mobile .section-5 .Text p{
       font-size: 14px;
       font-weight: 400;
-      line-height: 26.78px;
+      line-height: 23.44px;
       font-family: "IRANSansWebFANUM400";
       color: #000000;
       text-align: justify;
