@@ -1197,6 +1197,18 @@ video {
   width: max-content;
 }
 
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-\[70\%\] {
+  width: 70%;
+}
+
+.w-\[60\%\] {
+  width: 60%;
+}
+
 .max-w-\[300px\] {
   max-width: 300px;
 }
@@ -1205,12 +1217,16 @@ video {
   max-width: 382px;
 }
 
+.max-w-\[50\%\] {
+  max-width: 50%;
+}
+
 .max-w-\[50px\] {
   max-width: 50px;
 }
 
-.max-w-\[50\%\] {
-  max-width: 50%;
+.max-w-\[500px\] {
+  max-width: 500px;
 }
 
 .flex-shrink {
@@ -1602,6 +1618,10 @@ video {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid-cols-\[1fr\2c 5fr\] {
+  grid-template-columns: 1fr 5fr;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -1840,6 +1860,10 @@ video {
 
 .gap-\[6px\] {
   gap: 6px;
+}
+
+.gap-\[4em\] {
+  gap: 4em;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2282,6 +2306,14 @@ video {
   border-top-width: 1px;
 }
 
+.border-b-\[3px\] {
+  border-bottom-width: 3px;
+}
+
+.border-r-\[3px\] {
+  border-right-width: 3px;
+}
+
 .border-solid {
   border-style: solid;
 }
@@ -2568,6 +2600,16 @@ video {
   padding-bottom: 5em;
 }
 
+.px-\[5em\] {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.py-\[1em\] {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
 .pb-\[\.3em\] {
   padding-bottom: .3em;
 }
@@ -2598,6 +2640,18 @@ video {
 
 .pt-\[2em\] {
   padding-top: 2em;
+}
+
+.pb-\[4em\] {
+  padding-bottom: 4em;
+}
+
+.pr-\[\.4em\] {
+  padding-right: .4em;
+}
+
+.pr-\[5em\] {
+  padding-right: 5em;
 }
 
 .text-left {
@@ -2736,6 +2790,14 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[30px\] {
+  font-size: 30px;
+}
+
+.text-\[70px\] {
+  font-size: 70px;
 }
 
 .font-bold {
@@ -2920,6 +2982,18 @@ video {
 
 .leading-\[62\.61px\] {
   line-height: 62.61px;
+}
+
+.leading-\[24\.96px\] {
+  line-height: 24.96px;
+}
+
+.leading-\[109\.7px\] {
+  line-height: 109.7px;
+}
+
+.leading-\[46\.96px\] {
+  line-height: 46.96px;
 }
 
 .text-\[\#336699\]\/\[\.35\] {
@@ -3296,6 +3370,10 @@ video {
 
 .duration-\[1000ms\] {
   transition-duration: 1000ms;
+}
+
+.duration-\[1s\] {
+  transition-duration: 1s;
 }
 
 .contain-none {
@@ -4425,6 +4503,11 @@ main.ProductList-mobile .banner {
   background-color: rgb(237 237 237 / var(--tw-bg-opacity, 1));
 }
 
+.\[\&\.active\]\:text-dark.active {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
 .\[\&\.active\]\:\!opacity-\[1\].active {
   opacity: 1 !important;
 }
@@ -4440,6 +4523,30 @@ main.ProductList-mobile .banner {
 
 .\[\&\.fade-in\]\:opacity-\[1\].fade-in {
   opacity: 1;
+}
+
+.\[\&\.fixsec\]\:fixed.fixsec {
+  position: fixed;
+}
+
+.\[\&\.fixsec\]\:right-0.fixsec {
+  right: 0px;
+}
+
+.\[\&\.fixsec\]\:top-2.fixsec {
+  top: 0.5rem;
+}
+
+.\[\&\.fixsec\]\:z-3.fixsec {
+  z-index: 3;
+}
+
+.\[\&\.fixsec\]\:mt-\[11\.5em\].fixsec {
+  margin-top: 11.5em;
+}
+
+.\[\&\.fixsec\]\:pt-\[11em\].fixsec {
+  padding-top: 11em;
 }
 
 .\[\&\.goDown\]\:bg-white.goDown {
@@ -4466,6 +4573,10 @@ main.ProductList-mobile .banner {
 
 .\[\&\.show\]\:flex.show {
   display: flex;
+}
+
+.\[\&\.show\]\:max-h-\[unset\].show {
+  max-height: unset;
 }
 
 .\[\&\.show\]\:translate-y-\[0\].show {

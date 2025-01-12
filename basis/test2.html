@@ -1,0 +1,377 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="[##cms.query.id##]"> 
+    <member name="product" type="view"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="[##cms.query.id##]"> 
+    <member name="image-product" type="list" format="4"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="[##cms.query.id##]" > 
+    <member name="schema" type="view" postsql="select * from [db.schema] where TypeID not in (150,146,144,159,160,161,162,164)"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="[##cms.query.id##]"> 
+    <member name="pdf-product" type="list" format="9"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="[##cms.query.id##]">
+     <member name="related-product" type="list" size="133x132" blgid="18" link="product.bc"> </member>
+ </basis>
+ <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="[##cms.query.id##]"> 
+    <member name="related-project" type="list" size="240x212" link="project.bc"
+    blgid="1527" propertyid="13903,13889,90750,90752,90766"> </member> 
+</basis>
+<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]">
+    <member request="json-ld" type="scalar" name="fq" />
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[##cms.seo.title##]</title>
+    <meta name="description" content="[##cms.seo.description##]">
+    <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]"/>
+</head>
+<body>
+    <main class="ProductShow min-h-screen justify-between flex flex-col overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
+       <div class="Product-Container mt-[8em] w-full grid grid-cols-[1fr,5fr]">
+        <div class="FixedSec w-full flex justify-start">
+            <div class="sideMenu duration-[1s] [&.fixsec]:fixed [&.fixsec]:top-2 [&.fixsec]:right-0 [&.fixsec]:pt-[11em] 
+             relative w-full flex flex-col [&.fixsec]:z-3">
+                <ul class="menu__list w-auto pr-[5em] flex flex-col">
+                    <li  class="menu__item w-auto flex justify-start" >
+                        <a href="#section-1" class="menu__link active font-IRANSansWebFANUM400
+                         text-base font-normal leading-25.04 [&.active]:text-dark  text-gray">
+                            معرفی
+                        </a>
+                      
+                    </li>
+                    <li class="menu__item font-IRANSansWebFANUM400
+                    text-base font-normal leading-25.04 [&.active]:text-dark  text-gray">
+                        <a href="#section-2" class="menu__link  font-IRANSansWebFANUM400
+                        text-base font-normal leading-25.04 [&.active]:text-dark  text-gray">
+                            مشخصات فنی
+                        </a>
+               
+                    </li>
+                    <li class="menu__item font-IRANSansWebFANUM400
+                    text-base font-normal leading-25.04 [&.active]:text-dark  text-gray">
+                        <a href="#section-3" class="menu__link  font-IRANSansWebFANUM400
+                        text-base font-normal leading-25.04 [&.active]:text-dark  text-gray">
+                            محصولات مرتبط
+                        </a>
+                    
+                    </li>
+                    <li class="menu__item font-IRANSansWebFANUM400
+                    text-base font-normal leading-25.04 [&.active]:text-dark  text-gray">
+                        <a href="#section-4" class="menu__link  font-IRANSansWebFANUM400
+                        text-base font-normal leading-25.04 [&.active]:text-dark  text-gray">
+                            پروژه های مرتبط
+                        </a>
+                     
+                    </li>
+                  
+                </ul>
+                <span class="menu__active [&.fixsec]:mt-[11.5em] absolute right-0"></span>
+              </div>
+        </div>
+        <div class="sections w-full flex flex-col overflow-hidden">
+            <section id="section-1" class="section w-90p flex flex-col ml-auto ">
+                <div class="detailc w-full flex justify-between">
+                    <div class="Right w-auto max-w-[500px] flex-col flex justify-between">
+
+                        <div class="aboutPro h-fit py-[.3em] gap-2 w-auto flex-col flex border-r-[3px] border-green pr-[.4em]">
+                            <basis core="print" datamembername="db.product">
+                                <layout>
+                                    @child
+                                </layout>
+
+                                <face filter="TypeID=150">
+                                    <h1 class="textBold font-IRANSansWebFANUM700 font-semibold text-xl leading-31.03 text-dark">
+                                       @Answer
+                                    </h1> 
+                                </face>
+                            </basis>
+                            <!-- <basis core="print" datamembername="db.product">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="TypeID=144">
+                                    <span class="text font-IRANSansWebFANUM300 text-lg leading-28.17 text-dark text-justify font-light">
+                                        @Answer
+                                    </span>
+                                </face>
+                            </basis> -->
+                          
+                            <!-- <span class="textBold font-IRANSansWebFANUM700 font-semibold text-xl leading-31.03 text-dark">
+                                ای دی 2401-0319
+                            </span> -->
+                        </div>
+                        <div class="Title-2 w-auto flex justify-start">
+                            <h1 class="font-IRANSansWebFANUM400 font-normal text-lg  py-[.3em]
+                            leading-28.17 text-dark border-r-[3px] border-green pr-[.4em]">
+                                مشخصات فنی
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="Left w-auto flex justify-end ">
+                        <basis core="print" datamembername="db.image-product">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="ord=1000">
+                                <div class="IMG w-auto max-w-[300px]">
+                                    <img src="[##cms.cms.cdn##]/@largeIMG" alt="@name" title="@name" class=" w-auto object-cover">
+                                </div>
+                            </face>
+                        </basis>
+                      
+                    </div>
+                </div>
+            </section>
+            <section id="section-2" class="section w-90p flex flex-col ml-auto mt-[3em]">
+                <div class="Schemaboxes w-full flex flex-col">
+                    <div class="Description w-full flex border-b-[3px] justify-start items-center gap-3 border-green pb-[.3em]">
+                        <div class="title w-auto flex justify-start">
+                            <p class="font-IRANSansWebFANUM400 font-normal text-2xl leading-37.57 text-dark">
+                                توضیحات
+                            </p>
+                        </div>
+                        <div class="des w-auto flex flex-wrap">
+                            <basis core="print" datamembername="db.product">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="TypeID=144">
+                                    <p class="font-IRANSansWebFANUM300 font-light text-lg leading-28.17 text-dark text-justify">
+                                        @Answer
+                                    </p>
+                                </face>
+                            </basis>
+                           
+                        </div>
+                     
+                    </div>
+                    <div class="Schemass w-[60%] flex flex-col">
+                        <basis core="print" datamembername="db.product">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="TypeID=164">
+                        <div class="Schema hidden bold w-auto [&.show]:flex justify-start gap-[2em] border-b-[3px] border-green py-[.6em]">
+                            <span class="Question font-IRANSansWebFANUM400 font-normal text-2xl leading-37.57 text-dark">
+                                @Question
+                            </span>
+                            <span class="Answer font-IRANSansWebFANUM700 font-semibold text-2xl leading-37.57 text-dark">
+                                @Answer
+                            </span>
+                           </div>
+                            </face>
+                        </basis>
+                        <basis core="print" datamembername="db.pdf-product">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="ord=1000">
+                                <div class="Schema bold catalogue hidden w-auto [&.show]:flex justify-start gap-[2em] border-b-[3px] border-green py-[.6em]">
+                       
+                                    <a download="" href="@largeIMG"  alt="@name" title="@name" aria-label="@name" rel="noopener"
+                                     class="Answer font-IRANSansWebFANUM700 font-semibold text-2xl leading-37.57 text-dark">
+                                        دانلود کاتالوگ
+                                    </a>
+                                   </div>
+                            </face>
+                        </basis>
+                       
+                       <basis core="print" datamembername="db.schema">
+                           <layout>
+                               @child
+                           </layout>
+                           <face>
+                            <div class="Schema bold w-auto hidden [&.show]:flex justify-between gap-[2em] border-b-[3px] border-green py-[.6em]">
+                                <span class="Question font-IRANSansWebFANUM400 font-normal text-2xl leading-37.57 text-dark">
+                                    @Question
+    
+                                </span>
+                                <span class="Answer font-IRANSansWebFANUM300 font-light text-lg leading-28.17 text-dark">
+                                    @Answer
+                                </span>
+                            </div>
+                           </face>
+                       </basis>
+    
+                    </div>
+                </div>
+                <span class="showMore hover:cursor-pointer group/btn mb-[4em] ml-auto mt-[2em] w-max relative before:content-[''] before:absolute before:right-0 before:w-[0px] before:top-0
+                before:bg-green before:h-full before:z-0 before:duration-[.5s] before:ease-in hover:before:w-full
+                py-[.5em] px-[4em] border-[1px] border-green ">
+                   
+                    <span class="text group-hover/btn:text-white duration-75 text-dark font-IRANSansWebFANUM300 
+                    text-[10px] leading-[15.65px] font-light relative z-1">
+                    مشاهده موارد بیشتر
+                    </span>
+                </span>
+            </section>
+            <section id="section-3" class="section w-90p flex flex-col ml-auto mt-[3em]">
+                <div class="Related-container gap-7 w-full overflow-hidden flex flex-col">
+                    <div class="Title-big2 border-r-[3px] py-[.5em] border-green w-full mx-auto flex justify-start items-start">
+                         <h3 class="font-IRANSansWebFANUM400 mr-[.5em] text-lg leading-28.17 text-dark font-normal text-right">
+                             محصولات مرتبط
+                         </h3>
+                    </div>
+                    <div class="Products mt-[2em] overflow-hidden mb-[4em]  w-full mx-auto flex flex-col">
+                      <div class="swiper-products py-[1.5em] pr-[5em] relative w-full overflow-hidden">
+                         <div class="swiper-wrapper">
+                            <basis core="print" datamembername="db.related-product">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face>
+                                    <div class="swiper-slide flex">
+                                        <a href="@link"  alt="@title" title="@title" aria-label="@title" rel="noopener" class="product-x hover:opacity-[.6] duration-700 w-auto flex flex-col gap-2">
+                                          <div class="IMG w-[134px] h-[133px]">
+                                            <img src="/@00133X00132prp" alt="@title" title="@title" class="w-full h-full object-cover">
+                                          </div>
+                                          <div class="Title w-auto flex justify-center">
+                                            <p class="font-IRANSansWebFANUM300 font-light text-xs leading-18.78 text-dark text-clip">
+                                              @title
+                                            </p>
+                                          </div>
+                                        </a> 
+                                       </div>
+                                </face>
+                            </basis>
+                       
+                        
+                         </div>
+                         <div class="swiper-scrollbar"></div>
+                         <div class="swiper-button-next"></div>
+                         <div class="swiper-button-prev"></div>
+                      </div>
+                    </div>
+           
+                 </div>
+            </section>
+            <section id="section-4" class="section w-90p mb-[3em] flex flex-col ml-auto mt-[3em]">
+                <div class="Related-container gap-7 w-full overflow-hidden flex flex-col">
+                    <div class="Title-big2 border-r-[3px] py-[.5em] border-green w-full mx-auto flex justify-start items-start">
+                         <h3 class="font-IRANSansWebFANUM400 mr-[.5em] text-lg leading-28.17 text-dark font-normal text-right">
+                            پروژه های مرتبط 
+                         </h3>
+                    </div>
+                    <div class="Projects mt-[2em] overflow-hidden mb-[4em]  w-full mx-auto flex flex-col">
+                      <div class="swiper-projects py-[1.5em] relative w-full overflow-hidden pr-[5em]">
+                         <div class="swiper-wrapper">
+                            <basis core="print" datamembername="db.related-project">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face>
+                                    <div class="swiper-slide flex">
+                                        <a href="@link"  alt="@title" title="@title" aria-label="@title" rel="noopener"
+                                         class="project group/project  w-auto flex flex-col gap-2 ">
+                                            <div class="IMG w-[240px] overflow-hidden flex justify-center items-center">
+                                                <img src="/@00240X00212prp"  alt="@title" title="@title"
+                                                 class=" group-hover/project:scale-[1.1] duration-[1000ms]
+                                                ease-in-out w-full object-cover">
+                                            </div>
+                                            <div class="title w-full flex justify-start mt-3">
+                                                <p class="font-IRANSansWebFANUM300 font-light text-sm
+                                                leading-21.91 text-dark">
+                                                @title
+                                                </p>
+                                            </div>
+                                            <div class="Schema-box w-full flex flex-col gap-2">
+   
+                                                <div class="Schema w-full flex justify-between items-start">
+                                                    <span class="Question w-[50%] max-w-[50%] text-right flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                                                    leading-21.91 text-dark">
+                                                    محل
+                        
+                                                    </span>
+                                                    <span class="Answer w-[50%] max-w-[50%]  flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
+                                                    leading-21.91 text-dark">
+                                                    @prp_13889
+                                                    </span>
+                                                </div>
+                                                <div class="Schema w-full flex justify-between items-start">
+                                                    <span class="Question w-[50%] max-w-[50%] text-right flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                                                    leading-21.91 text-dark">
+                                                    مالک
+                        
+                                                    </span>
+                                                    <span class="Answer w-[50%] max-w-[50%]  flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
+                                                    leading-21.91 text-dark">
+                                                    @prp_90752
+                                                    </span>
+                                                </div>
+                                                <div class="Schema w-full flex justify-between items-start">
+                                                    <span class="Question w-[50%] max-w-[50%] text-right flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                                                    leading-21.91 text-dark">
+                                                    سازنده
+                        
+                                                    </span>
+                                                    <span class="Answer w-[50%] max-w-[50%]  flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
+                                                    leading-21.91 text-dark">
+                                                    @prp_90766
+                                                    </span>
+                                                </div>
+                                                <div class="Schema w-full flex justify-between items-start">
+                                                    <span class="Question w-[50%] max-w-[50%] text-right flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                                                    leading-21.91 text-dark">
+                                                    معمار
+                        
+                                                    </span>
+                                                    <span class="Answer w-[50%] max-w-[50%]  flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
+                                                    leading-21.91 text-dark">
+                                                    @prp_90750
+                                                    </span>
+                                                </div>
+                                                <div class="Schema w-full flex justify-between items-start">
+                                                    <span class="Question w-[50%] max-w-[50%] text-right flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                                                    leading-21.91 text-dark">
+                                                    واحد
+                        
+                                                    </span>
+                                                    <span class="Answer w-[50%] max-w-[50%]  flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
+                                                    leading-21.91 text-dark">
+                                                    <!-- @prp_90750 -->
+                                                    </span>
+                                                </div>
+                                                <div class="Schema w-full flex justify-between items-start">
+                                                    <span class="Question w-[50%] max-w-[50%] text-right flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                                                    leading-21.91 text-dark">
+                                                    مدل سوئیچ
+                                                    </span>
+                                                    <span class="Answer w-[50%] max-w-[50%]  flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
+                                                    leading-21.91 text-dark">
+                                                    <!-- @prp_90750 -->
+                                                    </span>
+                                                </div>
+                                              </div>
+                                        </a>
+                                    </div>
+                                </face>
+                            </basis>
+                     
+
+                       
+                         </div>
+                         <div class="swiper-scrollbar"></div>
+                         <div class="swiper-button-next"></div>
+                         <div class="swiper-button-prev"></div>
+                      </div>
+                    </div>
+           
+                 </div>
+            </section>
+        </div>
+    
+       </div>
+       <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"/>
+    </main>
+    <basis core="call" file="script.inc" pageindex="[##cms.cms.pageindex##]"/>
+    <script src="[##cms.cms.cdn##]/js/product.js"></script>
+    <script type="application/ld+json">
+        [##json.fq.column1##]
+      </script>
+</body>
+</html>
