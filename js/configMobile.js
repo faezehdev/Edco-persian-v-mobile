@@ -8,6 +8,10 @@ if(document.querySelector('.ContactUS-mobile')){
   let header = document.querySelector('header')
   header.classList.add('whiteHeader')
   }
+  else{
+    let header = document.querySelector('header')
+    header.classList.add('otherpage')
+  }
 menuIcon.addEventListener('click',()=>{
   if(!Isopen){
     menuContainer.classList.toggle('open')

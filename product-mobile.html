@@ -10,14 +10,16 @@
 </head>
 <body>
     <main class="ProductShow-mobile  overflow-hidden" dir="rtl">
-        <header id="mobile-header" class="MobileHeader fixed group/heade [&.goDown]:bg-white duration-150
+        <header id="mobile-header" class="MobileHeader fixed group/header [&.goDown]:bg-white duration-150
         py-[1.5em] z-[99] w-full grid grid-cols-2 top-0 left-0">
        
            <div class="right flex justify-start w-90p mr-auto gap-3">
                <nav class="mobile-menu w-auto flex justify-start items-center">
                    <span class="openNav w-auto flex flex-col gap-[6px] max-w-[50px] relative z-[10]" >
-                     <span class="toggle w-[18px] h-[2px] bg-dark rounded-[5px] duration-[.5s] [&.active]:rotate-[40deg]"></span>
-                     <span class="toggle w-[18px] h-[2px] bg-dark rounded-[5px] duration-[.5s] [&.active]:rotate-[-40deg]"></span>
+                     <span class="toggle w-[18px] h-[2px] group-[&.whiteHeader]/header:bg-white
+                     group-[&.darkHeader]/header:bg-dark bg-dark rounded-[5px] duration-[.5s] [&.active]:rotate-[40deg]"></span>
+                     <span class="toggle w-[18px] h-[2px]  group-[&.darkHeader]/header:bg-dark
+                      group-[&.whiteHeader]/header:bg-white bg-dark rounded-[5px] duration-[.5s] [&.active]:rotate-[-40deg]"></span>
                    </span>
                    <div class="MB-menu overflow-hidden flex-col w-0 h-[100svh] flex fixed z-[2] top-0 left-0 justify-center items-center bg-white duration-[.8s
                    [&.open]:w-full  duration-[.5s]">
@@ -41,9 +43,11 @@
                            </li>
                            <li class="MB-item w-full opacity-0 relative z-2 translate-x-[-100%] duration-[.8s] delay-[.4s]
                            [&.active]:opacity-[1] [&.active]:translate-x-[0]">
-                           <a href="#" class="group/link gap-[.5em] w-full flex font-IRANSansWebFANUM400 font-normal text-2xl leading-37.57 text-dark">
+                           <a href="#" class="group/link gap-[.5em] w-full flex font-IRANSansWebFANUM400 
+                           font-normal text-2xl leading-37.57 text-dark">
                                <span class="w-0 h-[1px] bg-dark left-0 relative z-2 rounded-[5px] translate-y-[21px]
-                               duration-[.5s] group-hover/link:w-[30%]"></span>   
+                               duration-[.5s] group-hover/link:w-[30%]">
+                            </span>   
                                    <span>مقالات </span>  
                         
                                </a>
@@ -100,12 +104,21 @@
                </nav>
                <div class="lang w-auto flex justify-start items-center relative z-2">
                    <a href="#" class="langIcon flex justify-center items-center gap-1
-                    font-Roboto600 text-base leading-18.75 text-dark">
-                    <span><svg  width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                       <path d="M7 1H3H2L4.5 4L7 1Z" fill="#282828" stroke="black"/>
+                    font-Roboto600 text-base leading-18.75  group-[&.darkHeader]/header:text-dark
+                     group-[&.whiteHeader]/header:text-white text-dark">
+                    <span><svg   width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path class="group-[&.whiteHeader]/header:stroke-white
+                        group-[&.whiteHeader]/header:fill-white
+                        group-[&.darkHeader]/header:stroke-dark
+                        group-[&.darkHeader]/header:fill-dark
+
+                        " d="M7 1H3H2L4.5 4L7 1Z" fill="#282828" stroke="black"/>
                        </svg>
                        </span>
-                       <span class="langIcon font-Roboto600 text-base leading-18.75 text-dark">EN</span>
+                       <span class="langIcon font-Roboto600 text-base
+                        group-[&.whiteHeader]/header:text-white
+                        group-[&.darkHeader]/header:text-dark
+                         leading-18.75 text-dark">EN</span>
                      
                    </a>
                    <div class="langs absolute top-[70%] left-[10%] flex flex-col py-[.5em] w-[70px] bg-white opacity-0
@@ -125,8 +138,17 @@
       
            </div>
            <div class="left flex justify-end w-90p ml-auto">
-               <div class="logo w-auto flex relative z-[10] justify-end">
-                   <img src="./images/logo.png" alt="" class="object-contain">
+               <div class="logo w-full flex relative z-[10] justify-end">
+                   <img src="./images/Layer_x0020_1 (2).png" alt="" class="object-contain absolute left-0 z-[10]
+                   group-[&.whiteHeader]/header:opacity-0 
+                   group-[&.darkHeader]/header:opacity-[1]
+                   group-[&.goDown]/header:opacity-[1]
+                   group-[&.otherpage]/header:opacity-[1]">
+                   <img src="./images/Vector (3).png" alt="" class="object-contain absolute left-0 z-[10]
+                   group-[&.whiteHeader]/header:opacity-[1] 
+                   group-[&.darkHeader]/header:opacity-[0]
+                   group-[&.goDown]/header:opacity-[0]
+                   group-[&.otherpage]/header:opacity-[0]">
                </div>
            </div>
        </header>
