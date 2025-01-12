@@ -1209,6 +1209,10 @@ video {
   max-width: 50px;
 }
 
+.max-w-\[50\%\] {
+  max-width: 50%;
+}
+
 .flex-shrink {
   flex-shrink: 1;
 }
