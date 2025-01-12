@@ -1092,10 +1092,6 @@ video {
   height: 100vh;
 }
 
-.h-\[70px\] {
-  height: 70px;
-}
-
 .max-h-0 {
   max-height: 0px;
 }
@@ -1118,6 +1114,10 @@ video {
 
 .w-\[18px\] {
   width: 18px;
+}
+
+.w-\[200px\] {
+  width: 200px;
 }
 
 .w-\[20px\] {
@@ -1191,10 +1191,6 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
-}
-
-.w-\[200px\] {
-  width: 200px;
 }
 
 .max-w-\[300px\] {
@@ -2562,11 +2558,6 @@ video {
 .py-\[5em\] {
   padding-top: 5em;
   padding-bottom: 5em;
-}
-
-.py-\[3em\] {
-  padding-top: 3em;
-  padding-bottom: 3em;
 }
 
 .pb-\[\.3em\] {
@@ -4374,6 +4365,14 @@ main.ProductList-C .banner {
   opacity: 1;
 }
 
+.group\/header.otherpage .group-\[\&\.otherpage\]\/header\:opacity-\[0\] {
+  opacity: 0;
+}
+
+.group\/header.otherpage .group-\[\&\.otherpage\]\/header\:opacity-\[1\] {
+  opacity: 1;
+}
+
 .group.toggle .group-\[\&\.toggle\]\:opacity-0 {
   opacity: 0;
 }
@@ -4384,18 +4383,6 @@ main.ProductList-C .banner {
 
 .group\/header.whiteHeader .group-\[\&\.whiteHeader\]\/header\:opacity-\[1\] {
   opacity: 1;
-}
-
-.group\/header.other .group-\[\&\.other\]\/header\:opacity-\[1\] {
-  opacity: 1;
-}
-
-.group\/header.otherpage .group-\[\&\.otherpage\]\/header\:opacity-\[1\] {
-  opacity: 1;
-}
-
-.group\/header.otherpage .group-\[\&\.otherpage\]\/header\:opacity-\[0\] {
-  opacity: 0;
 }
 
 @media (min-width: 480px) {
