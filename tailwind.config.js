@@ -21,7 +21,8 @@ module.exports = {
    dark1:'#1F1F1F',
    gray:"#8B8B8F",
    light:"#F1F1F1",
-   dark2:'#272727'
+   dark2:'#272727',
+   gray2:'#EDEDED'
      
     },
     fontFamily: {
