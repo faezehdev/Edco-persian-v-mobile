@@ -1,0 +1,102 @@
+<basis core="dbsource" source="basiscore" name="db" lid="2" mid="20" >
+    <member request="cat" type="tree" name="productCat"  parentid="[##cms.query.catid##]" />
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="2" mid="20">
+    <member request="cat" type="tree" name="subCat"  parentid="[##cms.query.catid##]"  
+    postsql="select * from [db.subCat] where parentid=[##cms.query.catid##]" />
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[##cms.seo.title##]</title>
+    <meta name="description" content="[##cms.seo.description##]">
+    <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]"/>
+</head>
+<body>
+    <main class="ProductList-mobile justify-between flex flex-col overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
+        <basis core="print" datamembername="db.productCat">
+            <face filter="RowNumber in (1)">
+        <section class="banner w-full flex pb-[3em] pt-[10em]" style="background-image: url([##cms.cms.cdn##]/images/list@catid.jpg);">
+            <div class="inner w-90p mx-auto flex-col flex justify-center items-center">
+           
+               <div class="leftSec w-full flex flex-col justify-center items-center">
+                    <div class="IMG w-auto flex justify-center">
+                       <img  src="[##cms.cms.cdn##]/@image" alt="@title" title="@title">
+                    </div>
+               </div>
+               <div class="rightSec w-full flex flex-col justify-start items-start">
+                <div class="Detail w-full gap-4 flex flex-col justify-center items-center">
+                    <div class="Title w-full mx-auto flex justify-start items-center">
+                        <h1 class="font-IRANSansWebFANUM700 font-semibold text-2xl leading-28.17 text-white">
+                            @title
+
+                        </h1>
+                    </div>
+                    <div class="Text w-auto flex flex-col gap-2">
+                        <p class="font-IRANSansWebFANUM300 font-light text-lg leading-28.17 text-white text-justify">
+                            @urldescription </p>
+                    </div>
+                </div>
+           </div>
+           </div>
+        </section>
+            </face>
+        </basis>
+        <section class="productContainer w-90p mb-[3em] mt-[1em] mx-auto flex flex-col">
+            <basis core="print" datamembername="db.subCat">
+                <layout>
+                    @child
+                </layout>
+                <face>
+                    
+                    <p  class="subcat">@catid</p>
+                </face>
+            </basis>
+            <div class="SelectBoxes mb-[4em] w-[279px] flex flex-col">
+                <div class="select_wrap w-full group/select_wrap my-[15px] mx-auto relative select-none">
+                    <ul class="default_option before:content-[''] before:absolute before:top-[34px] before:left-[14px]
+                    before:w-[15px] before:h-[15px]
+                     bg-white relative hover:cursor-pointer border-b-[1px] border-dark
+                     w-full mx-auto">
+                        <li class="w-[95%] py-[15px] mx-auto flex justify-start my-auto">
+                            <div class="option flex justify-center">
+                                <div class="title min-h-[30px] font-IRANSansWebFANUM700 font-semibold text-xl leading-31.03 text-dark
+                                 w-full mx-auto flex justify-start items-center ">
+                                    <!-- <span class="ProNames w-auto flex items-center gap-[1em] justify-center ">
+                                        <span class="name1 font-IRANSansWebFANUM700 font-semibold text-xl leading-31.03 text-dark">
+                                            الگانت
+                                        </span>
+                                        <span class="line w-[4px] flex h-[44px] bg-dark"></span>
+                                        <span class="name2  font-IRANSansWebFANUM300 font-light text-xl leading-31.03 text-dark">
+                                            متال
+                                        </span>
+                                    </span>  -->
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="select_ul group-[&.active]/select_wrap:block absolute top-[100%] left-0 rounded-[5px] hidden z-2
+                     right-0 w-full mx-auto mt-[.5em] bg-white">
+
+                    </ul>
+                </div>
+         
+            </div>
+         
+            <div class="products w-full flex flex-col justify-between items-center">
+         
+       
+            </div>
+        </section>
+       
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"/>
+    </main>
+
+
+    <basis core="call" file="script.inc" pageindex="[##cms.cms.pageindex##]"/>
+    <script src="[##cms.cms.cdn##]/js/product-list-mobile.js"></script>
+</body>
+</html>

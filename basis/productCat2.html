@@ -1,0 +1,87 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" catid="[##cms.query.catid##]" >
+    <member request="cat" type="tree" name="productCat" parentid="[##cms.query.catid##]" size="339X340"></member>
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" >
+    <member request="cat" type="tree" name="productCat1" parentid="[##cms.query.catid##]" 
+    size="339X340" postsql="select title from [db.productCat1] where parentid=71218"></member>
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productcat2 mobile</title>
+    <title>[##cms.seo.title##]</title>
+    <meta name="description" content="[##cms.seo.description##]">
+    <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]"/>
+</head>
+<body>
+    <main class="ProductCat2-mobile justify-between flex flex-col overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
+        <basis core="print" datamembername="db.productCat" >
+            <face filter="parentid in (71307,71308,71309,71310,71311,71312,71313,71314,71218) and @link is null">
+         <section class="proCat group/proCat  w-full h-screen flex"  style="background-image: url([##cms.cms.cdn##]/images/inner@catid-m.jpg);">
+             <div class="cat-inner w-90p gap-4 mx-auto flex flex-col h-full justify-center items-center">
+                <div class="leftSec w-full mt-6 flex flex-col justify-center items-center">
+                    <div class="IMG max-h-[400px] w-auto flex justify-center">
+                       <img src="[##cms.cms.cdn##]/@image" alt="@title" title="@title">
+                    </div>
+               </div>
+                 <div class="rightSec w-full flex flex-col ">
+                     <div class="Detail w-full flex flex-col justify-center items-center">
+                        <span class="ProNames w-auto flex items-center gap-[1em] justify-center ">
+                            <span class="name1 font-IRANSansWebFANUM700 font-semibold text-2xl leading-37.57 text-dark">
+                                [##db.productCat1.title##]
+                            </span>
+                            <span class="line w-[4px] flex h-[30px] bg-dark"></span>
+                            <span class="name2  font-IRANSansWebFANUM200 font-extralight text-2xl leading-37.57 text-dark">
+                                @title
+                            </span>
+                        </span> 
+                        <a href="product-list.bc?catid=@catid" data-cat="@catid"  alt="@title" title="@title" aria-label="@title" rel="noopener"
+                         class="defs w-[270px] h-[50px] mt-4 flex justify-center items-center border-[1px] border-dark
+                         font-IRANSansWebFANUM500 font-medium text-lg leading-28.17 text-dark">
+                            رنگ‌ها و مدل‌ها
+                    </a>
+                     </div>
+                </div>
+              
+            </div>
+         </section>
+            </face>
+            <face filter="parentid in (71307,71308,71309,71310,71311,71312,71313,71314,71218) and @link is null">
+                <section class="proCat group/proCat  w-full h-screen flex"  style="background-image: url([##cms.cms.cdn##]/images/inner@catid.jpg);">
+                    <div class="cat-inner w-90p gap-4 mx-auto flex flex-col h-full justify-center items-center">
+                       <div class="leftSec w-full mt-6 flex flex-col justify-center items-center">
+                           <div class="IMG max-h-[400px] w-auto flex justify-center">
+                              <img src="[##cms.cms.cdn##]/@image" alt="@title" title="@title">
+                           </div>
+                      </div>
+                        <div class="rightSec w-full flex flex-col ">
+                            <div class="Detail w-full flex flex-col justify-center items-center">
+                               <span class="ProNames w-auto flex items-center gap-[1em] justify-center ">
+                                   <span class="name1 font-IRANSansWebFANUM700 font-semibold text-2xl leading-37.57 text-dark">
+                                       [##db.productCat1.title##]
+                                   </span>
+                                   <span class="line w-[4px] flex h-[30px] bg-dark"></span>
+                                   <span class="name2  font-IRANSansWebFANUM200 font-extralight text-2xl leading-37.57 text-dark">
+                                       @title
+                                   </span>
+                               </span> 
+                               <a href="@link" data-cat="@catid"  alt="@title" title="@title" aria-label="@title" rel="noopener" rel="noopener"
+                                class="defs w-[270px] h-[50px] mt-4 flex justify-center items-center border-[1px] border-dark
+                                font-IRANSansWebFANUM500 font-medium text-lg leading-28.17 text-dark">
+                                   رنگ‌ها و مدل‌ها
+                           </a>
+                            </div>
+                       </div>
+                     
+                   </div>
+                </section>
+                   </face>
+        </basis>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"/>
+    </main>
+    <basis core="call" file="script.inc" pageindex="[##cms.cms.pageindex##]"/>
+</body>
+</html>

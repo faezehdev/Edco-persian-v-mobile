@@ -1,0 +1,101 @@
+<basis core="dbsource" source="media" name="db" lid="1" catid="2227"> 
+    <member type="list" name="galleryMobile" perpage="10" pageno="1"  />
+ </basis>
+ <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" >
+     <member request="cat" type="tree" name="productCat" parentid="71218" postsql="select * from [db.productCat] where parentid in (71218)"></member>
+</basis>
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محصولات</title>
+    <meta name="description" content="محصولات">
+    <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]"/>
+</head>
+<body>
+    <main class="ProductCat-mobile flex flex-col overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
+        <section class="section-1 w-full h-[100svh] flex justify-center items-center">
+            <div class="Banner w-full flex h-full relative">
+                <div class="swiper-banners w-full h-full relative">
+                    <div class="swiper-wrapper">
+                        <basis core="print" datamembername="db.galleryMobile">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="ord=1000">
+                        <div class="swiper-slide w-full h-full">
+                            <div class="IMG w-full h-full">
+                                <img src="[##cms.cms.cdn##]/@largeIMG" alt="ادکو" title="ادکو" class="w-full h-full object-cover ">
+                            </div>
+                        </div>
+                            </face>
+                        </basis>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+               
+    
+            </div>
+        </section>
+        <section class="section-2 w-full flex mt-[6em]">
+            <div class="Products-container gap-7 w-full flex flex-col">
+               <div class="Products-cat mb-[4em] w-90p mx-auto flex flex-col gap-[2em]">
+                <basis core="print" datamembername="db.productCat">
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="@link is not null">
+                   <a  href="@link"  data-cat="@catid" alt="@title" title="@title" aria-label="@title" rel="noopener"
+                    class="product [&.hover]:opacity-[.6] [&.active]:!opacity-[1] [&.fade-in]:opacity-[1] [&.fade-in]:translate-y-[0] w-full flex flex-col gap-2 
+                   translate-y-[5em] opacity-0">
+                       <div class="IMG w-full flex justify-center items-center">
+                           <img src="[##cms.cms.cdn##]/@image"  alt="@title" title="@title" class=" w-full object-cover">
+                       </div>
+                       <div class="Title mt-3 w-full flex justify-start items-start">
+                           <p class="font-IRANSansWebFANUM700 font-semibold text-lg leading-28.17 text-dark text-right">
+                            @title
+                           </p>
+                       </div>
+                       <div class="Text w-full flex justify-start items-start flex-col">
+                           <p class="font-IRANSansWebFANUM300 font-light text-[11px] leading-[17.22px] text-dark text-justify">
+                            @urldescription
+                          </p>
+                       </div>
+                   </a>
+                    </face>
+                    <face filter="@link is null">
+                        <a href="product-cat-2.bc?catid=@catid"  data-cat="@catid" alt="@title" title="@title" aria-label="@title" rel="noopener"
+                         class="product [&.hover]:opacity-[.6] [&.active]:!opacity-[1] [&.fade-in]:opacity-[1] [&.fade-in]:translate-y-[0] w-full flex flex-col gap-2 
+                        translate-y-[5em] opacity-0">
+                            <div class="IMG w-full flex justify-center items-center">
+                                <img src="[##cms.cms.cdn##]/@image"  alt="@title" title="@title" class=" w-full object-cover">
+                            </div>
+                            <div class="Title mt-3 w-full flex justify-start items-start">
+                                <p class="font-IRANSansWebFANUM700 font-semibold text-lg leading-28.17 text-dark text-right">
+                                 @title
+                                </p>
+                            </div>
+                            <div class="Text w-full flex justify-start items-start flex-col">
+                                <p class="font-IRANSansWebFANUM300 font-light text-[11px] leading-[17.22px] text-dark text-justify">
+                                 @urldescription
+                               </p>
+                            </div>
+                        </a>
+                         </face>
+                </basis>
+               </div>
+           
+            </div>
+        </section>
+
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"/>
+    </main>
+    <basis core="call" file="script.inc" pageindex="[##cms.cms.pageindex##]"/>
+    <script src="[##cms.cms.cdn##]/js/productCat-mobile.js"></script>
+</body>
+</html>

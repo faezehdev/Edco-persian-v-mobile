@@ -1,0 +1,104 @@
+<basis core="dbsource" source="media" name="db" lid="1" catid="2226"> 
+    <member type="list" name="blog" perpage="10" pageno="1"  /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="71233">
+     <member name="list-blog"  link="article.bc" propertyid="7245" size="340X149" type="list" /> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقالات</title>
+    <meta name="description" content="مقالات">
+    <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]"/>
+</head>
+<body>
+    <main class="Blog-C flex flex-col overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
+        <basis core="print" datamembername="db.blog">
+            <layout>
+                <section class="section-1 w-full h-[100svh] flex justify-center items-center">
+                    <div class="Banner w-full flex h-full relative">
+                     @child
+                 </div>
+               </section>
+         </layout>
+                 <face filter="ord=1000">
+                     <div class="IMG w-full h-full">
+                         <img src="[##cms.cms.cdn3##]/@largeIMG" alt="مقالات" title="مقالات" class="w-full h-full object-cover ">
+                     </div>
+                 </face>
+             </basis>
+          
+    
+          <section class="section-2 w-full flex mt-[4em]">
+            <div class="blog-scontainer  mb-[4em] gap-7 w-full flex flex-col">
+                <div class="Title-big2  w-full mx-auto flex justify-start items-center">
+                    <span class="line w-[25%] flex h-[1px] translate-y-[3px] bg-dark"></span>
+                        <h1 class="font-IRANSansWebFANUM500 mr-[.5em] text-xl leading-[33.48px] text-dark font-normal text-right">
+                            لیست مقالات
+                        </h1>
+                   </div>
+               <div class="Blogs w-90p mx-auto flex flex-col gap-[2em]">
+                <basis core="print" datamembername="db.list-blog">
+                    <layout>
+                        @child
+                    </layout>
+                    <face>
+                        <div class="blog group/blog w-full flex flex-col gap-2">
+                            <div class="IMG w-full overflow-hidden flex justify-center items-center">
+                                <a class="w-full" href="@link"  alt="@title" title="@title" aria-label="@title" rel="noopener" >
+                                <img src="[##cms.cms.cdn##]/@00340X00149prp"
+                                alt="@title" title="@title"
+                                class=" group-hover/project:scale-[1.1] duration-[1000ms]
+                                ease-in-out w-full object-cover"></a>
+                            </div>
+                            <div class="desc w-full flex-col gap-2 flex mt-3 min-h-[50px] justify-start">
+                                <div class="Title mt-3 w-full flex justify-start items-start">
+                                    <a class="w-full" href="@link"  alt="@title" title="@title" aria-label="@title" rel="noopener" >
+                                    <p class="font-IRANSansWebFANUM700 font-semibold text-xs leading-18.78 text-dark text-right">
+                                        @title
+                                    </p>
+                                    </a>
+                                </div>
+                                <div class="Text mt-3 w-full flex justify-start items-start flex-col">
+                                    <p class="font-IRANSansWebFANUM400 font-normal text-xs leading-18.78 text-dark text-justify">
+                                        @prp_7245 </p>
+                                </div>
+                            </div>
+                      
+                         <a href="@link"  alt="@title" title="@title" aria-label="@title" rel="noopener" 
+                         class="showMore group/btn mx-auto w-max relative before:content-[''] before:absolute
+                          before:right-0 before:w-full before:bottom-0
+                         before:bg-green before:h-[1px] before:z-0 before:duration-[.5s] before:ease-in hover:before:w-[0px]">
+                            
+                             <span class="text text-dark font-IRANSansWebFANUM400 
+                             text-[8px] leading-[12.52px] font-light relative z-1">
+                             مشاهده موارد بیشتر
+                             </span>
+                         </a>
+                        </div>
+                    </face>
+                </basis>
+    
+          
+               </div>
+               <span class="showMoreBTN  hover:cursor-pointer group/btn  mx-auto w-max relative before:content-[''] before:absolute before:right-0 before:w-[0px] before:top-0
+               before:bg-green before:h-full before:z-0 before:duration-[.5s] before:ease-in hover:before:w-full
+               py-[.5em] px-[3em] border-[1px] border-green ">
+                  
+                   <span class="text group-hover/btn:text-white duration-75 text-dark font-IRANSansWebFANUM300 
+                   text-[10px] leading-[15.65px] font-light relative z-1">
+                   مشاهده موارد بیشتر
+                   </span>
+               </span>
+            
+            </div>
+        </section>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"/>
+    </main>
+    <basis core="call" file="script.inc" pageindex="[##cms.cms.pageindex##]"/>
+    <script src="[##cms.cms.cdn##]/js/blog-mobile.js"></script>
+</body>
+</html>

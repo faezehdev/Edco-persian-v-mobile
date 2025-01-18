@@ -1,0 +1,212 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="1446461"> <member name="about" type="view"/ > </basis>	
+    <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="1446461"> <member name="image-about" type="list" format="4"/> </basis>	
+    <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="1446461"> <member name="video-about" type="list" format="3"/> </basis>
+    <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="1446499"> <member name="VISION" type="view"/ > </basis>
+     <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="1446499"> <member name="image-VISION" type="list" format="4"/> </basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره‌ی ما</title>
+    <meta name="description" content="درباره‌ی ادکو الکترونیک">
+    <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]" />
+
+</head>
+<body>
+    <main class="AboutUs-C justify-between flex flex-col overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+
+       
+        <section class="section-1 w-full h-[100svh] flex justify-center items-center">
+            <div class="Banner w-full flex h-full relative">
+                <div class="IMG w-full h-full">
+                    <basis core="print" datamembername="db.image-about">
+                       
+                        <face filter="ord=51">
+                            
+                            <img src="[##cms.cms.cdn##]/@largeIMG" alt="@name" class="w-full h-full object-cover ">
+                        </face>
+                    </basis>
+                </div>
+    
+            </div>
+          </section>
+
+          <section class="section-2 mb-[3em] w-full mt-[5em] flex flex-col justify-center items-center">
+           <basis core="print" datamembername="db.about">
+              
+               <face filter="TypeID=150">
+                   <div class="Title-big2  w-full mx-auto flex justify-start items-center">
+                       <span class="line w-[25%] flex h-[2px] translate-y-[3px] bg-dark"></span>
+                           <h1 class="font-IRANSansWebFANUM400 mr-[.5em] text-xl leading-[33.48px] text-dark font-normal text-right">
+                           @Answer
+                           </h1>
+                      </div>
+                   
+               </face>
+           </basis>
+
+              <div class="About-company w-90p mt-1 mx-auto flex-col gap-3 flex">
+                <div class="LeftSec w-full">
+                    <div class="IMG w-full flex justify-center">
+                        <basis core="print" datamembername="db.image-about">
+                            
+                            <face filter="ord=52">
+                                <img src="[##cms.cms.cdn##]/@largeIMG" alt="about us" class="w-full object-cover">
+                            </face>
+                        </basis>
+                    </div>
+                  </div>
+                  <div class="RightSec w-auto flex flex-col justify-center items-start">
+                 <basis core="print" datamembername="db.about">
+                     <layout>
+                         <div class="Text w-auto flex flex-col gap-2  font-IRANSansWebFANUM400 font-normal text-sm leading-[23.44px] text-dark text-justify">
+                            
+                             @child
+                         </div>
+                     </layout>
+                  
+                     <face filter="TypeID=250">
+                         @largetext
+                     </face>
+                 </basis>
+                  </div>
+               
+              </div>
+          </section>
+          <section class="section-3 bg-dark2 mb-[2em] w-full mt-[2em] flex flex-col justify-center items-center">
+              <div class="About-Us py-[2em] gap-[3em] w-90p mx-auto flex flex-col">
+                  <div class="RightSec w-full flex flex-col justify-center items-center">
+                    <div class="VideoBox group  w-full h-[388px] flex justify-center items-center ">
+                        <div class="Video w-full h-full flex justify-center items-center relative hover:cursor-pointer
+                        overflow-hidden flex-col duration-[.5s]">
+                        <basis core="print" datamembername="db.image-about">
+                           
+                                <else-layout>
+                                    <video class="w-full h-full object-cover">
+                                    
+                                </else-layout>
+                               
+                            <face filter="ord=53">
+                                <video class="w-full h-full object-cover" 
+                                poster="[##cms.cms.cdn##]/@largeIMG">
+                                
+                            </face>
+                        </basis>
+                        <basis core="print" datamembername="db.video-about">
+                           
+                            <face>
+                                
+                                <source src="[##cms.cms.cdn##]/@largeIMG">
+                            </face>
+                        </basis>
+                        </video>
+                            <div class="ov w-full h-full absolute flex justify-center items-center
+                            top-0 left-0 z-3 group-[&.toggle]:opacity-0 group-[&.toggle]:left-[-100%] duration-[.5s]">
+                                <div class="play my-auto mx-auto">
+                                   <img src="[##cms.cms.cdn##]/images/play.png" alt="play" class="w-[50px]">
+                                </div>
+                            </div>
+                         
+                        </div>
+                    </div>
+                  </div>
+                  <div class="LeftSec w-full flex justify-center items-center">
+                <basis core="print" datamembername="db.about">
+                    <layout>
+                        <div class="Text relative before:content-[''] before:absolute before:top-[-15px] before:right-0 before:w-[120px]
+                     before:bg-[#FE7D21] before:h-[3px]  font-IRANSansWebFANUM400 font-normal text-sm leading-[23.44px] text-white text-justify">
+                      
+                     @child
+                     </div>
+                    </layout>
+                  
+                    <face filter="TypeID=250">
+                        @largetext
+                    </face>
+                </basis>
+                  </div>
+              </div>
+          </section>
+
+          <section class="section-4 mb-[2em] w-full  flex flex-col justify-center items-center">
+            <basis core="print" datamembername="db.VISION">
+                
+                <face filter="TypeID=150">
+                    <div class="Title-big2  w-full mx-auto flex justify-start items-center">
+                        <span class="line w-[25%] flex h-[2px] translate-y-[3px] bg-dark"></span>
+                            <h2 class="font-IRANSansWebFANUM400 mr-[.5em] text-xl leading-[33.48px] text-dark font-normal text-right">
+                                @Answer
+                            </h2>
+                       </div>
+                    
+                </face>
+            </basis>
+
+              <div class="pers-company w-90p mt-3 flex-col mx-auto gap-[.5em] flex">
+                <div class="LeftSec w-full ">
+                    <div class="IMG w-full flex justify-center">
+                        <basis core="print" datamembername="db.image-VISION">
+                            
+                            <face filter="ord=51">
+                                <img src="[##cms.cms.cdn##]/@largeIMG" alt="@name" class="w-full object-cover">
+                                
+                            </face>
+                        </basis>
+                    </div>
+                  </div>
+                  <div class="RightSec w-auto flex flex-col justify-center items-start">
+                 <basis core="print" datamembername="db.VISION">
+                     <layout>
+                         <div class="Text w-auto flex flex-col gap-2 font-IRANSansWebFANUM400 font-normal text-sm leading-[23.44px] text-dark text-justify">
+                             
+                             @child
+                         </div>
+                     </layout>
+               
+                     <face filter="TypeID=250">
+                         @largetext
+                     </face>
+                 </basis>
+                  </div>
+               
+              </div>
+          </section>
+          <section class="section-5 mb-[3.5em] gap-8 w-full mt-[1em] flex flex-col justify-center items-center">
+           
+           <basis core="print" datamembername="db.VISION">
+              
+               <face filter="TypeID=128">
+                   
+                   <div class="Title-big2  w-full mx-auto flex justify-start items-center">
+                       <span class="line w-[25%] flex h-[2px] translate-y-[3px] bg-dark"></span>
+                           <h3 class="font-IRANSansWebFANUM400 mr-[.5em] text-xl leading-[33.48px] text-dark font-normal text-right">
+                             @Answer
+                           </h3>
+                      </div>
+               </face>
+           </basis>
+
+
+              <div class="cerificates w-90p mx-auto justify-center items-center gap-[2em] flex">
+                <basis core="print" datamembername="db.image-VISION">
+                   
+                    <face filter="ord=52">
+                        <div class="certificate w-auto flex justify-center">
+                           <img src="[##cms.cms.cdn##]/@largeIMG" alt="@name">
+                        </div>
+                        
+                    </face>
+                </basis>
+                
+              </div>
+          </section>
+          <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
+    </main>
+    <basis core="call" file="script.inc" pageindex="[##cms.cms.pageindex##]" />
+
+    <script src="[##cms.cms.cdn##]/js/aboutUS-mobile.js"></script>
+</body>
+</html>

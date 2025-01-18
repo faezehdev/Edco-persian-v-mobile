@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     let visibleCount = 4
     let itemPerpage = 4
     let loadMoreBtn = document.querySelector('.showMoreBTN')
-    if(blogs.length < 4){
+    if(blogs.length >= 4){
    loadMoreBtn.style.display='none'
     }
  

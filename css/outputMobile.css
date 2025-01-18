@@ -709,6 +709,10 @@ video {
   top: 100%;
 }
 
+.top-\[2em\] {
+  top: 2em;
+}
+
 .top-\[70\%\] {
   top: 70%;
 }
@@ -872,6 +876,10 @@ video {
   margin-right: auto;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -902,6 +910,10 @@ video {
 
 .mt-\[1em\] {
   margin-top: 1em;
+}
+
+.mt-\[25px\] {
+  margin-top: 25px;
 }
 
 .mt-\[2em\] {
@@ -1096,6 +1108,14 @@ video {
   max-height: 0px;
 }
 
+.max-h-\[400px\] {
+  max-height: 400px;
+}
+
+.min-h-\[30px\] {
+  min-height: 30px;
+}
+
 .min-h-\[50px\] {
   min-height: 50px;
 }
@@ -1164,6 +1184,10 @@ video {
   width: 70px;
 }
 
+.w-\[86\%\] {
+  width: 86%;
+}
+
 .w-\[90\%\] {
   width: 90%;
 }
@@ -1197,18 +1221,6 @@ video {
   width: max-content;
 }
 
-.w-\[50\%\] {
-  width: 50%;
-}
-
-.w-\[70\%\] {
-  width: 70%;
-}
-
-.w-\[60\%\] {
-  width: 60%;
-}
-
 .max-w-\[300px\] {
   max-width: 300px;
 }
@@ -1223,10 +1235,6 @@ video {
 
 .max-w-\[50px\] {
   max-width: 50px;
-}
-
-.max-w-\[500px\] {
-  max-width: 500px;
 }
 
 .flex-shrink {
@@ -1618,8 +1626,8 @@ video {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.grid-cols-\[1fr\2c 5fr\] {
-  grid-template-columns: 1fr 5fr;
+.grid-cols-\[1fr\2c 1fr\2c \.5fr\] {
+  grid-template-columns: 1fr 1fr .5fr;
 }
 
 .flex-row {
@@ -1860,10 +1868,6 @@ video {
 
 .gap-\[6px\] {
   gap: 6px;
-}
-
-.gap-\[4em\] {
-  gap: 4em;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2290,6 +2294,10 @@ video {
   border-left-width: 1px;
 }
 
+.border-l-\[1px\] {
+  border-left-width: 1px;
+}
+
 .border-r {
   border-right-width: 1px;
 }
@@ -2306,12 +2314,8 @@ video {
   border-top-width: 1px;
 }
 
-.border-b-\[3px\] {
-  border-bottom-width: 3px;
-}
-
-.border-r-\[3px\] {
-  border-right-width: 3px;
+.border-t-\[1px\] {
+  border-top-width: 1px;
 }
 
 .border-solid {
@@ -2600,16 +2604,6 @@ video {
   padding-bottom: 5em;
 }
 
-.px-\[5em\] {
-  padding-left: 5em;
-  padding-right: 5em;
-}
-
-.py-\[1em\] {
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
 .pb-\[\.3em\] {
   padding-bottom: .3em;
 }
@@ -2624,6 +2618,10 @@ video {
 
 .pb-\[3em\] {
   padding-bottom: 3em;
+}
+
+.pl-\[\.5em\] {
+  padding-left: .5em;
 }
 
 .pl-\[5em\] {
@@ -2642,16 +2640,8 @@ video {
   padding-top: 2em;
 }
 
-.pb-\[4em\] {
-  padding-bottom: 4em;
-}
-
-.pr-\[\.4em\] {
-  padding-right: .4em;
-}
-
-.pr-\[5em\] {
-  padding-right: 5em;
+.pt-\[5em\] {
+  padding-top: 5em;
 }
 
 .text-left {
@@ -2708,6 +2698,10 @@ video {
 
 .align-super {
   vertical-align: super;
+}
+
+.\!font-IRANSansWebFANUM400 {
+  font-family: IRANSansWebFANUM400 !important;
 }
 
 .font-IRANSansWebFANUM300 {
@@ -2790,14 +2784,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[30px\] {
-  font-size: 30px;
-}
-
-.text-\[70px\] {
-  font-size: 70px;
 }
 
 .font-bold {
@@ -2984,18 +2970,6 @@ video {
   line-height: 62.61px;
 }
 
-.leading-\[24\.96px\] {
-  line-height: 24.96px;
-}
-
-.leading-\[109\.7px\] {
-  line-height: 109.7px;
-}
-
-.leading-\[46\.96px\] {
-  line-height: 46.96px;
-}
-
 .text-\[\#336699\]\/\[\.35\] {
   color: rgb(51 102 153 / .35);
 }
@@ -3073,6 +3047,10 @@ video {
 
 .opacity-0 {
   opacity: 0;
+}
+
+.opacity-\[\.7\] {
+  opacity: .7;
 }
 
 .bg-blend-normal {
@@ -3372,10 +3350,6 @@ video {
   transition-duration: 1000ms;
 }
 
-.duration-\[1s\] {
-  transition-duration: 1s;
-}
-
 .contain-none {
   contain: none;
 }
@@ -3604,7 +3578,7 @@ a {
 
 @keyframes line{
   0% {
-    margin-top: -47px
+    margin-top: -105px
   }
 
   80% {
@@ -4138,6 +4112,26 @@ main.ProductList-mobile .banner {
   top: 29px;
 }
 
+.SelectBoxes.hide{
+  opacity: 0;
+  display: none;
+}
+
+p.else{
+  text-align: right;
+  margin-right: 5%;
+}
+
+p.subcat{
+  display: none;
+}
+
+.ProductList-mobile .ProNames{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -4503,11 +4497,6 @@ main.ProductList-mobile .banner {
   background-color: rgb(237 237 237 / var(--tw-bg-opacity, 1));
 }
 
-.\[\&\.active\]\:text-dark.active {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
-}
-
 .\[\&\.active\]\:\!opacity-\[1\].active {
   opacity: 1 !important;
 }
@@ -4523,30 +4512,6 @@ main.ProductList-mobile .banner {
 
 .\[\&\.fade-in\]\:opacity-\[1\].fade-in {
   opacity: 1;
-}
-
-.\[\&\.fixsec\]\:fixed.fixsec {
-  position: fixed;
-}
-
-.\[\&\.fixsec\]\:right-0.fixsec {
-  right: 0px;
-}
-
-.\[\&\.fixsec\]\:top-2.fixsec {
-  top: 0.5rem;
-}
-
-.\[\&\.fixsec\]\:z-3.fixsec {
-  z-index: 3;
-}
-
-.\[\&\.fixsec\]\:mt-\[11\.5em\].fixsec {
-  margin-top: 11.5em;
-}
-
-.\[\&\.fixsec\]\:pt-\[11em\].fixsec {
-  padding-top: 11em;
 }
 
 .\[\&\.goDown\]\:bg-white.goDown {
@@ -4575,10 +4540,6 @@ main.ProductList-mobile .banner {
   display: flex;
 }
 
-.\[\&\.show\]\:max-h-\[unset\].show {
-  max-height: unset;
-}
-
 .\[\&\.show\]\:translate-y-\[0\].show {
   --tw-translate-y: 0;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -4586,4 +4547,4 @@ main.ProductList-mobile .banner {
 
 .\[\&\.show\]\:opacity-\[1\].show {
   opacity: 1;
-} 
+}

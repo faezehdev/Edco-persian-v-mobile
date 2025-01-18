@@ -1,0 +1,78 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##cms.query.catid##]">
+    <member name="list-product" size="240x240" type="list"  propertyid="39729,39704,38195"/> 
+  </basis>
+  <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20">
+    <member request="cat" type="tree" name="subCat"  parentid="[##cms.query.catid##]"  />
+</basis>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+       
+    <section class="productContainer w-90p mb-[3em] mt-[3em] mx-auto flex flex-col">
+        <div class="title w-[86%] mb-[3.5em] mx-auto flex justify-start items-center my-[1.5em]">
+            <basis core="print" datamembername="db.subCat">
+                <layout>
+                    @child
+                </layout>
+                <face>
+                    <span class="ProNames w-auto flex items-center gap-[1em] justify-center ">
+                        <span class="name1 font-IRANSansWebFANUM700 font-semibold text-2xl leading-37.57 text-dark">
+                           @title
+                        </span>
+                        <span class="line w-[4px] flex h-[44px] bg-dark"></span>
+                        <span class="name2  font-IRANSansWebFANUM300 font-light text-2xl leading-37.57 text-dark">
+                            @title
+                        </span>
+                    </span> 
+                </face>
+            </basis>
+          
+        </div>
+        <div class="products w-full grid grid-cols-3 items-center">
+            <basis core="print" datamembername="db.list-product">
+                <layout>
+                    @child
+                </layout>
+                <face>
+                    <a href="@link" alt="@title" title="@title" class="product-c  
+                    [&.hover]:opacity-[.6] [&.active]:!opacity-[1] [&.fade-in]:opacity-[1]
+                    [&.fade-in]:translate-y-[0] w-[240px] flex flex-col gap-2 
+                   translate-y-[5em] opacity-0 duration-700 justify-center items-center">
+                       <div class="IMG w-[240px] h-[240px]">
+                         <img src="[##cms.cms.cdn##]/@00240X00240prp" alt="@title" title="@title" class="w-full h-full object-cover">
+                       </div>
+                       <div class="Title w-[240px] flex justify-start flex-col gap-1">
+                           <span class="titlemain font-IRANSansWebFANUM300 font-light text-xs leading-18.78 text-dark text-right">
+                               <p class="font-IRANSansWebFANUM400 font-normal text-sm leading-21.91 text-dark text-right">
+                                @title
+                               </p>
+                           </span>
+                           <span class="title-2 font-IRANSansWebFANUM500 font-medium text-xs leading-18.78 text-dark text-right">
+                               <p class="font-IRANSansWebFANUM500 font-medium text-xs leading-18.78 text-dark text-right">
+                                @prp_38195	@prp_39704
+                               </p>
+                           </span>
+                           <span class="title-3 font-IRANSansWebFANUM200 font-extralight text-sm leading-21.91 text-dark text-right">
+                               <p class="font-IRANSansWebFANUM200 font-extralight text-sm leading-21.91 text-dark text-right">
+                                @prp_39729
+                               </p>
+                           </span>
+                    
+                       </div>
+                     </a> 
+          
+                </face>
+            </basis>
+        </div>
+    </section>
+   
+   
+</body>
+</html>

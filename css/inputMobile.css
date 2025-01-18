@@ -134,7 +134,7 @@
   
 @keyframes line{
     0% {
-     margin-top: -47px
+     margin-top: -105px
  }
  80% {
      margin-top: 0px
@@ -625,3 +625,20 @@ text-align: justify;
       .SelectBoxes .default_option.topsec::before{
         top: 29px;
       } 
+
+      .SelectBoxes.hide{
+        opacity: 0;
+        display: none;
+      }
+      p.else{
+        text-align: right;
+        margin-right: 5%;
+      }
+      p.subcat{
+        display: none;
+    }
+    .ProductList-mobile .ProNames{
+      width: 100%;
+    display: flex;
+    flex-wrap: wrap
+    }

@@ -2,7 +2,7 @@
     <member name="video" type="list" format="3"/> 
 </basis>
 <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="1446461"> 
-   <member name="banner2" type="list" format="4" postsql="select * from [db.banner2] where ord=50"/> 
+   <member name="banner2" type="list" format="4" postsql="select * from [db.banner2] where ord=1"/> 
 </basis>
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="1446461">
     <member name="aboutus" type="view"/>
@@ -66,7 +66,7 @@
           </div>
         </section>
         <section class="section-2 w-full flex relative">
-            <div class="Aboutus py-[5em] pl-[5em]  before:content-[''] 
+            <div class="Aboutus pt-[5em] pl-[5em]  before:content-[''] 
             before:left-0 before:w-full before:flex before:absolute before:h-full
              before:bg-[#00000040] before:duration-100 before:top-0 
              bg w-full" style="background-image: url(/[##db.banner2.largeIMG##]);">
@@ -177,68 +177,66 @@
                         @title
                         </p>
                     </div>
-                  <div class="Schema-box w-full flex flex-col gap-2">
-                        <div class="Schema  w-full flex justify-between items-start">
-                            <span class="Question w-auto max-w-[50%] flex-wrap flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                    <div class="Schema-box mt-[1em] w-full flex flex-col gap-2">
+                        <div class="Schema w-full flex justify-between items-center">
+                           <a href="/@link">
+
+                               <span class="Question w-auto flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                               leading-21.91 text-dark">
+                               @title
+                               
+                           </span>
+                       </a>
+                            <!-- <span class="Answer w-auto flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
+                            leading-21.91 text-dark">
+                                تهران، نیاوران
+                            </span> -->
+                        </div>
+                        <div class="Schema w-full flex justify-between items-center">
+                            <span class="Question w-auto flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
                             leading-21.91 text-dark">
                             محل
+
                             </span>
                             <span class="Answer w-auto flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
                             leading-21.91 text-dark">
                             @prp_13889
                             </span>
                         </div>
-                        <div class="Schema  w-full flex justify-between items-start">
-                            <span class="Question w-auto max-w-[50%] flex-wrap flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                        <div class="Schema w-full flex justify-between items-center">
+                            <span class="Question w-auto flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
                             leading-21.91 text-dark">
                             مالک
+
                             </span>
                             <span class="Answer w-auto flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
                             leading-21.91 text-dark">
                             @prp_90752
                             </span>
                         </div>
-                
-                        <div class="Schema  w-full flex justify-between items-start">
-                            <span class="Question w-auto max-w-[50%] flex-wrap flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                        <div class="Schema w-full flex justify-between items-center">
+                            <span class="Question w-auto flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
                             leading-21.91 text-dark">
                             سازنده
+
                             </span>
                             <span class="Answer w-auto flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
                             leading-21.91 text-dark">
                             @prp_90766
                             </span>
                         </div>
-                        <div class="Schema  w-full flex justify-between items-start">
-                            <span class="Question w-auto max-w-[50%] flex-wrap flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                        <div class="Schema w-full flex justify-between items-center">
+                            <span class="Question w-auto flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
                             leading-21.91 text-dark">
                             معمار
+
                             </span>
                             <span class="Answer w-auto flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
                             leading-21.91 text-dark">
                             @prp_90750
                             </span>
                         </div>
-                        <div class="Schema  w-full flex justify-between items-start">
-                            <span class="Question w-auto max-w-[50%] flex-wrap flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
-                            leading-21.91 text-dark">
-                            واحد
-                            </span>
-                            <span class="Answer w-auto flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
-                            leading-21.91 text-dark">
-                            <!-- @prp_90750 -->
-                            </span>
-                        </div>
-                        <div class="Schema  w-full flex justify-between items-start">
-                            <span class="Question w-auto max-w-[50%] flex-wrap flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
-                            leading-21.91 text-dark">
-                            مدل سوئیچ
-                            </span>
-                            <span class="Answer w-auto flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
-                            leading-21.91 text-dark">
-                            <!-- @prp_90750 -->
-                            </span>
-                        </div>
+                    
                   </div>
                    </a>
                     </face>
@@ -271,16 +269,19 @@
                     <face>
                 <div class="blog group/blog w-full flex flex-col gap-2">
                     <div class="IMG w-full overflow-hidden flex justify-center items-center">
+                        <a class="w-full" href="@link"  alt="@title" title="@title" aria-label="@title" rel="noopener" >
                         <img src="[##cms.cms.cdn##]/@00340X00149prp"
                         alt="@title" title="@title"
                         class=" group-hover/project:scale-[1.1] duration-[1000ms]
-                        ease-in-out w-full object-cover">
+                        ease-in-out w-full object-cover"></a>
                     </div>
                     <div class="desc w-full flex-col gap-2 flex mt-3 min-h-[50px] justify-start">
                         <div class="Title mt-3 w-full flex justify-start items-start">
+                            <a class="w-full" href="@link"  alt="@title" title="@title" aria-label="@title" rel="noopener" >
                             <p class="font-IRANSansWebFANUM700 font-semibold text-xs leading-18.78 text-dark text-right">
                                 @title
                             </p>
+                            </a>
                         </div>
                         <div class="Text mt-3 w-full flex justify-start items-start flex-col">
                             <p class="font-IRANSansWebFANUM400 font-normal text-xs leading-18.78 text-dark text-justify">
@@ -295,7 +296,7 @@
                     
                      <span class="text text-dark font-IRANSansWebFANUM400 
                      text-[8px] leading-[12.52px] font-light relative z-1">
-                     مشاهده موارد بیشتر
+                     مشاهده بیشتر
                      </span>
                  </a>
                 </div>

@@ -1,0 +1,199 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
+    <member name="blog" type="view"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
+    <member name="title" type="view" postsql="select * from [db.title] where TypeID=150"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
+    <member name="text" type="view" postsql="select * from [db.text] where TypeID=250"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="[##cms.query.id##]"> 
+    <member name="image-blog" type="list" format="4"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
+    <member name="related-blog" type="list" size="340X149" blgid="222" propertyid="7245" link="article.bc"> </member> 
+</basis>
+<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]">
+    <member request="json-ld" type="scalar" name="fq" />
+  </basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[##cms.seo.title##]</title>
+    <meta name="description" content="[##cms.seo.description##]">
+    <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]"/>
+</head>
+<body>
+    <main class="ArticleShow-mobile flex flex-col overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
+      <section class="content-c mt-[8em] w-full mx-auto flex flex-col">
+        <div class="Title-big2  w-90p  mx-auto flex justify-start items-start">
+            <span class="line w-[25%] flex h-[1px] translate-y-[12px] bg-dark"></span>
+                <h1 class="font-IRANSansWebFANUM400  mr-[.5em] text-base leading-[26.78px] text-dark font-normal text-right">
+                    [##db.title.Answer##]
+                </h1>
+           </div>
+           <basis core="print" datamembername="db.image-blog">
+            <layout>
+                @child
+            </layout>
+            <face filter="ord=51">
+        <div class="IMG w-full my-[2em] flex justify-center">
+            <img src="[##cms.cms.cdn##]/@largeIMG" class="w-full object-cover" alt="[##db.title.Answer##]" title="[##db.title.Answer##]">
+        </div>
+            </face>
+           </basis>
+        <div class="text-C my-[1em]  w-90p  mx-auto flex flex-col gap-3">
+            <basis core="print" datamembername="db.text">
+                <face filter="RowNumber=1">
+            <div class="title w-full flex justify-start items-start">
+                <h2 class="font-IRANSansWebFANUM700 font-semibold text-sm leading-21.91 text-dark text-justify">
+                    @text
+                </h2>
+            </div>
+                </face>
+            </basis>
+            <div class="text w-full flex flex-col">
+                <basis core="print" datamembername="db.text">
+              
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="RowNumber=1">
+                <p class="font-IRANSansWebFANUM400 text-sm leading-32.03 text-dark text-justify">
+                    @largetext
+                </p>
+                    </face>
+                </basis>
+            </div>
+        </div>
+        <div class="text-I  my-[1em]  w-90p  mx-auto flex-col flex gap-3">
+            <div class="Rightsec w-auto flex flex-col">
+                <basis core="print" datamembername="db.text">
+              
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="RowNumber=2">
+                <div class="title w-full flex justify-start items-start">
+                    <h2 class="font-IRANSansWebFANUM700 font-semibold text-sm leading-21.91 text-dark text-justify">
+                        @text
+                    </h2>
+                </div>
+                    </face>
+                </basis>
+                <div class="text w-full flex flex-col">
+                    <basis core="print" datamembername="db.text">
+              
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="RowNumber=2">
+                    <p class="font-IRANSansWebFANUM400 text-sm leading-32.03 text-dark text-justify">
+                        @largetext
+                    </p>
+                        </face>
+                    </basis>
+                </div>
+            </div>
+            <div class="Leftsec w-full flex justify-end items-end">
+                <basis core="print" datamembername="db.image-blog">
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="ord=52">
+                <div class="IMG w-full flex justify-center">
+                    <img src="[##cms.cms.cdn##]/@largeIMG" class="w-full object-cover" alt="[##db.title.Answer##]" title="[##db.title.Answer##]">
+                </div>
+                    </face>
+                </basis>
+            </div>
+    
+         
+        </div>
+        <basis core="print" datamembername="db.text">
+              
+            <layout>
+                <div class="text-C  my-[1em]  w-90p  mx-auto flex flex-col gap-3">
+                @child
+                </div>
+            </layout>
+            <face filter="RowNumber not in (1,2)">
+                <div class="title w-full flex justify-start items-start">
+                    <h2 class="font-IRANSansWebFANUM700 font-semibold text-sm leading-21.91 text-dark text-justify">
+                        @text
+                    </h2>
+                </div>
+                <div class="text w-full flex flex-col">
+                    <p class="font-IRANSansWebFANUM300 text-sm leading-21.91 text-dark text-justify">
+                        @largetext
+                    </p>
+                  
+                </div>
+            </face>
+        </basis>
+    
+      </section>
+      <basis core="print" datamembername="db.related-blog">
+        <layout>
+            <section class="section-2 w-full flex mt-[25px]">
+                <div class="blog-scontainer gap-7 w-full flex flex-col">
+                    <div class="Title-big2  w-full  mx-auto flex justify-start items-center">
+                        <span class="line w-[25%] flex h-[1px] translate-y-[3px] bg-dark"></span>
+                            <h2 class="font-IRANSansWebFANUM500  mr-[.5em] text-2xl leading-[40.18px] text-dark font-medium text-right">
+                                مقالات مرتبط
+                            </h2>
+                       </div>
+                       <div class="Blogs mb-[4em]  w-90p mx-auto flex flex-col gap-[2em]">
+                       @child
+                       </div>
+                       
+                </div>
+            </section>
+        </layout>
+        <face>
+            <div class="blog group/blog w-full flex flex-col gap-2">
+                <div class="IMG w-full overflow-hidden flex justify-center items-center">
+                    <a class="w-full" href="@link"  alt="@title" title="@title" aria-label="@title" rel="noopener" >
+                    <img src="[##cms.cms.cdn##]/@00340X00149prp"
+                    alt="@title" title="@title"
+                    class=" group-hover/project:scale-[1.1] duration-[1000ms]
+                    ease-in-out w-full object-cover"></a>
+                </div>
+                <div class="desc w-full flex-col gap-2 flex mt-3 min-h-[50px] justify-start">
+                    <div class="Title mt-3 w-full flex justify-start items-start">
+                        <a class="w-full" href="@link"  alt="@title" title="@title" aria-label="@title" rel="noopener" >
+                        <p class="font-IRANSansWebFANUM700 font-semibold text-xs leading-18.78 text-dark text-right">
+                            @title
+                        </p>
+                        </a>
+                    </div>
+                    <div class="Text mt-3 w-full flex justify-start items-start flex-col">
+                        <p class="font-IRANSansWebFANUM400 font-normal text-xs leading-18.78 text-dark text-justify">
+                            @prp_7245 </p>
+                    </div>
+                </div>
+          
+             <a href="@link"  alt="@title" title="@title" aria-label="@title" rel="noopener" 
+             class="showMore group/btn mx-auto w-max relative before:content-[''] before:absolute
+              before:right-0 before:w-full before:bottom-0
+             before:bg-green before:h-[1px] before:z-0 before:duration-[.5s] before:ease-in hover:before:w-[0px]">
+                
+                 <span class="text text-dark font-IRANSansWebFANUM400 
+                 text-[8px] leading-[12.52px] font-light relative z-1">
+                 مشاهده بیشتر
+                 </span>
+             </a>
+            </div>
+                </face>
+      </basis>
+      <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"/> 
+    </main>
+    <basis core="call" file="script.inc" pageindex="[##cms.cms.pageindex##]"/>
+    <script type="application/ld+json">
+      [##json.fq.column1##]
+    </script>
+</body>
+</html>
